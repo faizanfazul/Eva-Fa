@@ -1,61 +1,73 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    outline: none;
-    list-style: none;
-    font-family: 'Open Sans', sans-serif;
-    text-decoration: none;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  list-style: none;
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
 }
 
 header {
-    background-color: #36454F;
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding-bottom: 10px;
+  background-color: #36454f;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding-bottom: 10px;
 }
 
 nav {
-    background-color: #36454F;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
+  background-color: #36454f;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
 }
 
-nav ul{
-    display: flex;
-    align-items: center;
-    gap: 200px;
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
 }
 
 nav li {
-    text-transform: uppercase;
-    color: #e2cb99;
-    cursor: pointer;
+  text-transform: uppercase;
+  color: #e2cb99;
+  cursor: pointer;
 }
 
 nav li:hover {
-    color: #fff;
-    transition: all 0.5s ease-in-out;
+  color: #fff;
+  transition: all 0.5s ease-in-out;
 }
 
+.icons {
+  width: 26px;
+}
+
+.icons:hover {
+  transition: all 0.5s ease-in-out;
+  opacity: 0.8;  
+}
+
+/* Hamburger menu start */
 .hamburger {
   flex-direction: column;
   justify-content: space-between;
   height: 20px;
   width: 30px;
-  background:none;
+  background: none;
+  border: none;
+  outline: none;
   cursor: pointer;
-    position: fixed;
-    top:10px;
-    left: 10px;
-    z-index:999;
-    display: none;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 999;
+  display: none;
 }
-
 .line {
   height: 3px;
   width: 100%;
@@ -88,163 +100,142 @@ nav li:hover {
 }
 
 .hamburger .line:nth-child(3).active {
-  transform: rotate(-45deg) translate(4px, -4px);
+  transform: rotate(-45deg) translate(7px, -7px);
 }
+/* Hamburger menu Ends */
 
 .logo a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .logo {
-    text-align: center;
+  text-align: center;
 }
 
 .logo img {
-    width: 130px;
-    cursor: pointer;
+  width: 130px;
+  cursor: pointer;
 }
 
-.icons{
-    position: relative;
+.cart-icon {
+  position: relative;
+  display: inline-block;
 }
 
-.icons svg {
-    fill: #e2cb99;
-    width: 24px;
+.cart-count {
+  color: #000;
+  position: absolute;
+  top: -8px;
+  left: 15px;
+  font-size: 0.6rem;
+  border-radius: 100px;
+  padding: 0px 2px 0px 2px;
+  background-color: #fff;
+  font-weight: bold;
 }
 
-.icons svg:nth-child(1){
-    width: 20px;
+.follow {
+  text-align: center;
+  text-transform: uppercase;
+  color: #e2cb99;
+  font-size: 1.5rem;
 }
 
-.icons svg:hover {
-    fill: #fff;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
+.follow svg {
+  width: 20px;
+}
+.follow svg:hover {
+  opacity: 0.8;
+  width: 20px;
 }
 
-.number {
-    position: fixed;
-    color: #000;
-    font-size: 0.6rem;
-    border-radius: 100px;
-    padding: 0px 2px 0px 2px;
-    background-color: #fff;
-    font-weight: bold;
+.instagram-icon {
+  fill: #C13584;
 }
 
-.follow{
-    text-align: center;
-    text-transform: uppercase;
-    color: #e2cb99;
-    font-size: 1.5rem;
+.facebook-icon {
+  fill: #1877F2;
 }
 
-.follow svg{
-    width: 20px;
-}
-.follow svg:hover{
-    opacity: 0.8;
-    width: 20px;
+hr {
+  width: 90%;
+  margin: 0 auto;
 }
 
-.instagram-icon{
-    fill: rgb(255, 20, 228);
+h1,
+p {
+  text-align: center;
+}
+footer {
+  background-color: #36454f;
+  padding: 20px 0px 20px 0px;
 }
 
-.facebook-icon{
-    fill: rgb(10, 0, 204);
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
 }
 
-hr{
-    width: 90%;
-    margin: 0 auto;
+.footer-links div ul li a {
+  color: #fff;
+  line-height: 25px;
+  font-size: 0.9rem;
 }
 
-h1,p{
-    text-align: center;
-}
-footer{
-    background-color: #36454F;
-    padding: 20px 0px 20px 0px;
+.footer-links div ul li a:hover {
+  transition: all 0.5s ease-in-out;
+  color: #ccc;
 }
 
-.footer-links{
+.footer-links div {
+  color: #e2cb99;
+}
+
+.copyright a {
+  display: block;
+  text-align: center;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .hamburger {
     display: flex;
-    justify-content: center;
-    gap: 100px;
+    top: 20px;
+  }
+
+  nav ul li {
+    display: none;
+  }
+
+  header {
+    padding: 0;
+  }
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0;
+    position: absolute;
+    top: 15px;
+    gap: 2px;
+    left: 75%;
 }
 
-.footer-links div ul li a{
-    color: #fff;
-    line-height: 25px;
-    font-size: 0.9rem;
+.icons {
+  width: 26px;
 }
-
-.footer-links div ul li a:hover{
-    transition: all 0.5s ease-in-out;
-    color: #ccc;
-}
-
-.footer-links div{
-    color: #e2cb99;
-}
-
-.copyright a{
-    display: block;
-    text-align: center;
-    color: #fff;
-}
-
-@media(max-width:600px){
-    .hamburger{
-        display: flex;
-        top: 20px;
-    }
-    
-    nav ul{
-        display: none;
-    }
-
-    header{
-        padding: 0;
-    }
-
-    nav {
-        background-color: #36454F;
-        display: flex;
-        justify-content: flex-end;
-        position: absolute;
-        top: 35px;
-        left: 76%;
-    }
-
-    .logo img {
-        width: 110px;
-        cursor: pointer;
-    }
-
-    .icons{
-        position: relative;
-        top: -15px;
-    }
-
-    .icons svg {
-        fill: #e2cb99;
-        width: 20px;
-    }
-    
-    .icons svg:nth-child(1){
-        width: 16px;
-    }
-
-    .footer-links{
-        gap: 0;
-    }
-    .footer-links div div{
-        margin-left:6px;
-    }
-    .footer-links div ul{
-        margin-left: 6px;
-    }
+  .logo img {
+    width: 110px;
+    cursor: pointer;
+  }
+  .footer-links {
+    gap: 0;
+  }
+  .footer-links div div {
+    margin-left: 6px;
+  }
+  .footer-links div ul {
+    margin-left: 6px;
+  }
 }
