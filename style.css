@@ -25,7 +25,6 @@ header {
   position: absolute;
   top: 30px;
   left: 88%;
-  z-index: 999;
   column-gap: 10px;
 }
 
@@ -35,6 +34,7 @@ header {
     position: absolute;
   left: 50px;
   top: 30px;
+  z-index: 2;
 }
 
 .currency select,option{
@@ -42,6 +42,7 @@ header {
   border: none;
   color: #e2cb99;
 }
+
 
 .logo{
   display: block;
