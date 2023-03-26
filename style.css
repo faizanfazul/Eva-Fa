@@ -18,17 +18,46 @@ header {
   padding-bottom: 10px;
 }
 
+.icons-section{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  top: 30px;
+  left: 88%;
+  z-index: 999;
+  column-gap: 10px;
+}
+
+.currency{
+  display: flex;
+  align-items: center;
+    position: absolute;
+  left: 50px;
+  top: 30px;
+}
+
+.currency select,option{
+  background: none;
+  border: none;
+  color: #e2cb99;
+}
+
+.logo{
+  display: block;
+  margin: 0 auto;
+}
+
 nav {
   background-color: #36454f;
   display: flex;
   justify-content: center;
-  gap: 30px;
+  align-items: center;
+  position: relative;
 }
 
 nav ul {
   display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 100px;
 }
 
@@ -104,15 +133,7 @@ nav li:hover {
 }
 /* Hamburger menu Ends */
 
-.logo a {
-  text-decoration: none;
-}
-
-.logo {
-  text-align: center;
-}
-
-.logo img {
+.logo{
   width: 130px;
   cursor: pointer;
 }
@@ -126,7 +147,7 @@ nav li:hover {
   color: #000;
   position: absolute;
   top: -8px;
-  left: 15px;
+  left: 20px;
   font-size: 0.6rem;
   border-radius: 100px;
   padding: 0px 2px 0px 2px;
@@ -141,20 +162,13 @@ nav li:hover {
   font-size: 1.5rem;
 }
 
-.follow svg {
+.follow img {
   width: 20px;
 }
-.follow svg:hover {
+
+.follow img:hover {
   opacity: 0.8;
   width: 20px;
-}
-
-.instagram-icon {
-  fill: #C13584;
-}
-
-.facebook-icon {
-  fill: #1877F2;
 }
 
 hr {
@@ -210,22 +224,36 @@ footer {
 
   header {
     padding: 0;
+    height: 70px;
   }
 
 nav ul {
     display: flex;
-    justify-content: flex-end;
-    gap: 0;
     position: absolute;
     top: 15px;
     gap: 2px;
-    left: 75%;
+}
+.icons-section{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  top: -43px;
+  left: -20px;
+  column-gap: 0px;
+}
+.currency{
+  display: flex;
+  align-items: center;
+    position: absolute;
+  left: 50px;
+  top: 22px;
 }
 
 .icons {
-  width: 26px;
+  width: 22px;
 }
-  .logo img {
+  .logo{
     width: 110px;
     cursor: pointer;
   }
