@@ -12,7 +12,7 @@
 
 <body>
     <header>
-        <button class="hamburger" id="hamburger">
+        <button class="hamburger" id="hambur">
             <span class="line"></span>
             <span class="line"></span>
             <span class="line"></span>
@@ -26,9 +26,9 @@
             </select>
         </div>
         <!-- Eva fa logo -->
-        <div>
+        <div class="logo">
             <a href="index.html">
-                <img src="resources/logo.png" alt="Eva Fa logo" class="logo">
+                <img src="resources/logo.png" alt="Eva Fa logo">
             </a>
         </div>
         <!-- icons in the header -->
@@ -42,17 +42,22 @@
             <a href="#">
                 <img src="resources/profile.png" alt="profile icon" class="icons">
             </a>
-            <div class="cart-icon">
+            <div class="cart-icon" id="cart">
                 <a href="#">
                     <img src="resources/cart.png" alt="cart icon" class="icons">
-                    <span class="cart-count">100</span>
+                    <span class="cart-count" id="cart-item">10</span>
                 </a>
             </div>
+        </div>
+        <div id="cart-section">
+            <h2>CART</h2> 
+            <img src="resources/X.png" alt="x icon" id="x-icon">
+            <hr>
         </div>
         <nav id="navbar">
             <ul>
                 <a href="#">
-                    <li>Rings</li>
+                    <li>hug</li>
                 </a>
                 <a href="#">
                     <li>Bracelets</li>
