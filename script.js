@@ -1,11 +1,17 @@
 "use strict";
-const hamburger = document.getElementById("hambur");
+const hamburger = document.getElementById("hamburg");
 const lines = document.querySelectorAll(".line");
 const nav = document.getElementById("navbar");
 const cartItem = document.getElementById("cart-item");
 const cart = document.getElementById("cart");
 const cartSection = document.getElementById("cart-section");
 const xIcon = document.getElementById("x-icon");
+
+window.onload = function () {
+  setInterval(() => {
+    document.querySelector(".wrapper").style.display = "none";
+  }, 1000);
+};
 
 hamburger.addEventListener("click", () => {
   lines.forEach((line) => line.classList.toggle("active"));
@@ -31,9 +37,3 @@ xIcon.addEventListener("click", (e) => {
   cartSection.style.display = "none";
 });
 
-
-window.addEventListener("load", (e) => {
-  e.preventDefault();
-  const element = document.querySelector("html");
-  element.classList.add("show");
-});
