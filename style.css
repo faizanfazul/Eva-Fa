@@ -8,14 +8,14 @@
   font-family: "Open Sans", sans-serif;
   text-decoration: none;
 }
-/* add loader animation */
+
 header {
   background-color: #36454f;
   position: sticky;
   position: -webkit-sticky;
   top: 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   z-index: 200;
 }
 
@@ -64,7 +64,7 @@ nav {
 
 nav ul {
   display: flex;
-  gap: 100px;
+  column-gap: 100px;
 }
 
 nav li {
@@ -299,7 +299,7 @@ footer {
   text-align: center;
   color: #fff;
 }
-
+/* styling for Mobiles */
 @media (max-width: 600px) {
   .hamburger {
     display: flex;
@@ -307,7 +307,7 @@ footer {
   }
 
   header {
-    height: 60px;
+    height: 65px;
   }
 .logo{
    position: relative;
@@ -340,6 +340,10 @@ footer {
     line-height: 50px;
   }
 
+h1{
+  font-size: 1.5rem;
+}
+
   .icons-section {
     display: flex;
     justify-content: flex-end;
@@ -365,7 +369,7 @@ footer {
   }
 
 #cart-section h2{
-  margin-top: 5px;
+  margin-top: 7px;
 }
 
 #cart-section{
