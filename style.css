@@ -197,11 +197,12 @@ nav li:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 200vh;
   width: 100%;
   z-index: 999;
   position: absolute;
   background-color: #fff;
+  top: -50%;
 }
 
 .ball{

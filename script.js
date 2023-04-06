@@ -1,4 +1,5 @@
 "use strict";
+const body = document.querySelector("body");
 const hamburger = document.getElementById("hamburg");
 const lines = document.querySelectorAll(".line");
 const nav = document.getElementById("navbar");
@@ -31,9 +32,11 @@ cart.addEventListener("click", (e) => {
       lines.forEach((line) => line.classList.toggle("active"));
   }
   cartSection.style.display = "block"
+  body.style.backdropFilter = "blur(5px)";
 });
 
 xIcon.addEventListener("click", (e) => {
   cartSection.style.display = "none";
+  body.style.backdropFilter = "blur(0px)";
 });
 
