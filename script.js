@@ -7,11 +7,11 @@ const cart = document.getElementById("cart");
 const cartSection = document.getElementById("cart-section");
 const xIcon = document.getElementById("x-icon");
 
-// window.onload = function () {
-//   setInterval(() => {
-//     document.querySelector(".wrapper").style.display = "none";
-//   }, 1000);
-// };
+window.onload = function () {
+  setInterval(() => {
+    document.querySelector(".wrapper").style.display = "none";
+  }, 1000);
+};
 
 hamburger.addEventListener("click", () => {
   lines.forEach((line) => line.classList.toggle("active"));
