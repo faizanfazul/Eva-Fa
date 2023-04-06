@@ -100,7 +100,7 @@ nav li:hover {
   position: fixed;
   top: 10px;
   left: 10px;
-  z-index: 900;
+  z-index: 999;
   display: none;
 }
 
@@ -195,7 +195,10 @@ nav li:hover {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  width: 100%;
   z-index: 999;
+  position: absolute;
+  background-color: #36454f;
 }
 
 .ball{
