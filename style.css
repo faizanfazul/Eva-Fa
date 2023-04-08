@@ -175,10 +175,10 @@ nav li:hover {
   z-index: 999;
   color: #fff;
   text-align: center;
-  height: 100vh;
-  overflow-y: auto;
+  overflow: auto;
   background-color: #36454f;
   color: #e2cb99;
+  height: 100vh;
   padding-top: 10px;
 }
 
@@ -218,7 +218,7 @@ nav li:hover {
   animation-delay: 0.25s;
 }
 .three{
-  animation-delay: 0.5s;
+  animation-delay: 0.50s;
 }
 .four{
   animation-delay: 0.75s;
@@ -323,7 +323,7 @@ footer {
     width: 50%;
     z-index: 20;
     height: 100vh;
-    overflow-y: auto;
+    overflow: auto;
   }
 
   nav ul {

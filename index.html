@@ -18,6 +18,14 @@
         <div class="three ball"></div>
         <div class="four ball"></div>
     </div>
+    <!-- Cart section on click -->
+    <div id="cart-section">
+        <h2>CART <img src="resources/cart.png" alt="cart icon" width="24"></h2>
+        <img src="resources/X.png" alt="x icon" id="x-icon">
+        <hr>
+        <p>Your Cart is Empty</p>
+    </div>
+
     <header>
         <button class="hamburger" id="hamburg">
             <span class="line"></span>
@@ -56,12 +64,6 @@
                 </a>
             </div>
         </div>
-        <!-- Cart section on click -->
-        <div id="cart-section">
-            <h2>CART <img src="resources/cart.png" alt="" width="25"></h2>
-            <img src="resources/X.png" alt="x icon" id="x-icon">
-            <hr>
-        </div>
         <!-- navbar starts -->
         <nav id="navbar">
             <ul>
@@ -86,10 +88,10 @@
             </ul>
         </nav>
     </header>
-
-    <main>
-        <script src="js/jssor.slider-28.1.0.min.js"></script>
-        <script>
+    <div id="page-container">
+        <main>
+            <script src="js/jssor.slider-28.1.0.min.js"></script>
+            <script>
                 window.jssor_1_slider_init = function () {
 
                     var jssor_1_SlideoTransitions = [
@@ -156,13 +158,13 @@
                     $Jssor$.$AddEvent(window, "resize", ScaleSlider);
                     $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
                 };
-                </script>
+            </script>
             <style>
                 /* jssor slider loading skin spin css */
                 .jssorl-009-spin img {
                     animation: jssorl-009-spin 1.5s linear infinite;
                 }
-                
+
                 @keyframes jssorl-009-spin {
                     from {
                         transform: rotate(0deg);
@@ -172,6 +174,7 @@
                         transform: rotate(360deg);
                     }
                 }
+
                 /*jssor slider bullet skin 132 css*/
                 .jssorb132 {
                     position: absolute;
@@ -190,7 +193,7 @@
                     stroke-miterlimit: 10;
                     stroke-opacity: 0.8;
                 }
-                
+
                 .jssorb132 .i:hover .b {
                     fill: #000;
                     fill-opacity: .8;
@@ -198,7 +201,7 @@
                     stroke-width: 2000;
                     stroke-opacity: 0.8;
                 }
-                
+
                 .jssorb132 .iav .b {
                     fill: #000;
                     stroke: #fff;
@@ -216,7 +219,7 @@
                     position: absolute;
                     cursor: pointer;
                 }
-                
+
                 .jssora051 .a {
                     fill: none;
                     stroke: #fff;
@@ -231,166 +234,174 @@
                 .jssora051.jssora051dn {
                     opacity: .5;
                 }
-                
+
                 .jssora051.jssora051ds {
                     opacity: .3;
                     pointer-events: none;
                 }
-                </style>
+            </style>
             <section class="carousal-slider">
-            <div id="jssor_1"
-            style="position:relative;margin:0 auto;top:0px;left:0px;width:1600px;height:650px;overflow:hidden;visibility:hidden;">
-                <div data-u="slides"
-                    style="cursor:default;position:relative;top:0px;left:0px;width:1600px;height:700px;overflow:hidden;">
-                    <div>
-                        <img data-u="image" style="opacity:10;"
-                            data-src="resources/slide-1.jpg"/>
-                        <div data-ts="flat" data-p="275" data-po="40% 50%"
-                            style="left:150px;top:40px;width:800px;height:300px;position:absolute;">
-                            <div data-to="50% 50%" data-t="0"
-                                style="left:50px;top:520px;width:400px;height:100px;position:absolute;color:#e2cb99;font-family:'open-sens';font-size:84px;font-weight:900;">
-                                MOTHERS DAY SPECIAL</div>
-                        </div>
-                    </div>
-                    <div style="background-color:#000000;">
-                        <img data-u="image" style="opacity:10;" data-src="resources/slide-2.jpg" />
-                        <div data-ts="flat" data-p="1080"
-                            style="left:0px;top:0px;width:1600px;height:560px;position:absolute;">
-                            <svg viewbox="0 0 600 400" data-ts="preserve-3d" width="600" height="400"
-                                data-tchd="jssor_1_msk_3"
-                                style="left:255px;top:0px;display:block;position:absolute;overflow:visible;">
-                                <g mask="url(#jssor_1_msk_3)">
-                                    <path data-to="300px -180px" fill="none" stroke="#36454f"
-                                        stroke-width="20" d="M410-350L410-10L190-10L190-350Z" x="190" y="-350"
-                                        data-t="10" style="position:absolute;overflow:visible;"></path>
-                                </g>
-                            </svg>
-                            <svg viewbox="0 0 800 72" data-to="50% 50%" width="800" height="72" data-t="11"
-                                style="left:-800px;top:78px;display:block;position:absolute;font-family:'open-sans';font-size:84px;font-weight:900;overflow:visible;">
-                                <text fill="#e2cb99" text-anchor="middle" x="400" y="72">GULF MEXICO
-                                </text>
-                            </svg>
-                            <svg viewbox="0 0 800 72" data-to="50% 50%" width="800" height="72" data-t="12"
-                                style="left:1600px;top:153px;display:block;position:absolute;font-family:'open-sans';font-size:60px;font-weight:900;overflow:visible;">
-                                <text fill="#e2cb99" text-anchor="middle" x="400" y="72">ENJOY SAILBOAT
-                                </text>
-                            </svg>
-                        </div>
-                    </div>
-                    <div>
-                        <img data-u="image" data-src="resources/slide-3.jpg" />
-                        <div data-ts="flat" data-p="1080"
-                            style="left:0px;top:0px;width:1600px;height:560px;position:absolute;">
-                            <div data-to="50% 50%" data-t="13"
-                                style="left:100px;top:-20px;width:800px;height:200px;position:absolute;opacity:0;">
-                                <div
-                                    style="left:94px;top:35px;width:480px;height:90px;position:absolute;color:#e2cb99;font-family:'open-sans';font-size:72px;line-height:1.2;">
-                                    CREATION</div>
-                                <div
-                                    style="left:307px;top:115px;width:400px;height:50px;position:absolute;color:#e2cb99;font-family:'open-sans';font-size:42px;line-height:1.1;text-align:center;background-color:#36454f;">
-                                    for creative peoples</div>
+                <div id="jssor_1"
+                    style="position:relative;margin:0 auto;top:0px;left:0px;width:1600px;height:650px;overflow:hidden;visibility:hidden;">
+                    <div data-u="slides"
+                        style="cursor:default;position:relative;top:0px;left:0px;width:1600px;height:700px;overflow:hidden;">
+                        <div>
+                            <img data-u="image" style="opacity:10;" data-src="resources/slide-1.jpg" />
+                            <div data-ts="flat" data-p="275" data-po="40% 50%"
+                                style="left:150px;top:40px;width:800px;height:300px;position:absolute;">
+                                <div data-to="50% 50%" data-t="0"
+                                    style="left:50px;top:520px;width:400px;height:100px;position:absolute;color:#e2cb99;font-family:'open-sens';font-size:84px;font-weight:900;">
+                                    MOTHERS DAY SPECIAL</div>
                             </div>
                         </div>
+                        <div style="background-color:#000000;">
+                            <img data-u="image" style="opacity:10;" data-src="resources/slide-2.jpg" />
+                            <div data-ts="flat" data-p="1080"
+                                style="left:0px;top:0px;width:1600px;height:560px;position:absolute;">
+                                <svg viewbox="0 0 600 400" data-ts="preserve-3d" width="600" height="400"
+                                    data-tchd="jssor_1_msk_3"
+                                    style="left:255px;top:0px;display:block;position:absolute;overflow:visible;">
+                                    <g mask="url(#jssor_1_msk_3)">
+                                        <path data-to="300px -180px" fill="none" stroke="#36454f" stroke-width="20"
+                                            d="M410-350L410-10L190-10L190-350Z" x="190" y="-350" data-t="10"
+                                            style="position:absolute;overflow:visible;"></path>
+                                    </g>
+                                </svg>
+                                <svg viewbox="0 0 800 72" data-to="50% 50%" width="800" height="72" data-t="11"
+                                    style="left:-800px;top:78px;display:block;position:absolute;font-family:'open-sans';font-size:84px;font-weight:900;overflow:visible;">
+                                    <text fill="#e2cb99" text-anchor="middle" x="400" y="72">GULF MEXICO
+                                    </text>
+                                </svg>
+                                <svg viewbox="0 0 800 72" data-to="50% 50%" width="800" height="72" data-t="12"
+                                    style="left:1600px;top:153px;display:block;position:absolute;font-family:'open-sans';font-size:60px;font-weight:900;overflow:visible;">
+                                    <text fill="#e2cb99" text-anchor="middle" x="400" y="72">ENJOY SAILBOAT
+                                    </text>
+                                </svg>
+                            </div>
+                        </div>
+                        <div>
+                            <img data-u="image" data-src="resources/slide-3.jpg" />
+                            <div data-ts="flat" data-p="1080"
+                                style="left:0px;top:0px;width:1600px;height:560px;position:absolute;">
+                                <div data-to="50% 50%" data-t="13"
+                                    style="left:100px;top:-20px;width:800px;height:200px;position:absolute;opacity:0;">
+                                    <div
+                                        style="left:94px;top:35px;width:480px;height:90px;position:absolute;color:#e2cb99;font-family:'open-sans';font-size:72px;line-height:1.2;">
+                                        CREATION</div>
+                                    <div
+                                        style="left:307px;top:115px;width:400px;height:50px;position:absolute;color:#e2cb99;font-family:'open-sans';font-size:42px;line-height:1.1;text-align:center;background-color:#36454f;">
+                                        for creative peoples</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <img data-u="image" data-src="resources/slide-4.jpg" alt="..." />
+                        </div>
                     </div>
-                    <div>
-                        <img data-u="image" data-src="resources/slide-4.jpg" alt="..."/>
+                    <!-- Bullet Navigator -->
+                    <div data-u="navigator" class="jssorb132" style="position:absolute;bottom:24px;right:16px;"
+                        data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+                        <div data-u="prototype" class="i" style="width:12px;height:12px;">
+                            <svg viewbox="0 0 16000 16000"
+                                style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                                <circle class="b" cx="8000" cy="8000" r="5800"></circle>
+                            </svg>
+                        </div>
                     </div>
-                </div>
-                <!-- Bullet Navigator -->
-                <div data-u="navigator" class="jssorb132" style="position:absolute;bottom:24px;right:16px;"
-                    data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
-                    <div data-u="prototype" class="i" style="width:12px;height:12px;">
-                        <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-                            <circle class="b" cx="8000" cy="8000" r="5800"></circle>
+                    <!-- Arrow Navigator -->
+                    <div data-u="arrowleft" class="jssora051" style="width:55px;height:55px;top:0px;left:25px;"
+                        data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+                        <svg viewbox="0 0 16000 16000"
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;background-color:rgba(25, 25, 25, 0.5)">
+                            <polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
+                        </svg>
+                    </div>
+                    <div data-u="arrowright" class="jssora051" style="width:55px;height:55px;top:0px;right:25px;"
+                        data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+                        <svg viewbox="0 0 16000 16000"
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;background-color:rgba(25, 25, 25, 0.5);">
+                            <polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
                         </svg>
                     </div>
                 </div>
-                <!-- Arrow Navigator -->
-                <div data-u="arrowleft" class="jssora051" style="width:55px;height:55px;top:0px;left:25px;"
-                    data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
-                    <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;background-color:rgba(25, 25, 25, 0.5)">
-                        <polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
-                    </svg>
+                <script>jssor_1_slider_init();</script>
+            </section>
+            <h1>New Arrival</h1>
+            <p>Magisk in Recovery
+                In the case when your device does not have ramdisk in boot images, Magisk has no choice but to hijack
+                the recovery
+                partition. For these devices, you will have to reboot to recovery every time you want Magisk enabled.
+
+                When Magisk hijacks the recovery, there is a special mechanism to allow you to actually boot into
+                recovery mode. Each
+                device model has its own key combo to boot into recovery, as an example for Galaxy S10 it is (Power +
+                Bixby + Volume
+                Up). A quick search online should easily get you this info. As soon as you press the key combo and the
+                device vibrates
+                with a splash screen, release all buttons to boot into Magisk. If you decide to boot into the actual
+                recovery mode, long
+                press volume up until you see the recovery screen.</p>
+        </main>
+
+        <footer>
+            <div class="follow">
+                Follow us<br>
+                <a href="#">
+                    <img src="resources/facebook.png" alt="facebook icon">
+                </a>
+                <a href="#">
+                    <img src="resources/instagram.png" alt="instagram icon">
+                </a>
+            </div>
+
+            <hr>
+            <br>
+
+            <div class="footer-links">
+                <div class="help">
+                    <div>Help</div><br>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Free Life Time Warranty</a></li>
+                        <li><a href="#">Free Secure Shipping</a></li>
+                        <li><a href="#">Why Eva Gems ?</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Delivery / Shipment Policy</a></li>
+                        <li><a href="#">Refund & Cancellation Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Refund policy</a></li>
+                    </ul>
                 </div>
-                <div data-u="arrowright" class="jssora051" style="width:55px;height:55px;top:0px;right:25px;"
-                    data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
-                    <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;background-color:rgba(25, 25, 25, 0.5);">
-                        <polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
-                    </svg>
+                <div class="contact">
+                    <div>Contact</div><br>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Free Life Time Warranty</a></li>
+                        <li><a href="#">Free Secure Shipping</a></li>
+                        <li><a href="#">Why Eva Gems ?</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Delivery / Shipment Policy</a></li>
+                    </ul>
+                </div>
+                <div class="main menu">
+                    <div>Main Menu</div><br>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Free Life Time Warranty</a></li>
+                        <li><a href="#">Free Secure Shipping</a></li>
+                        <li><a href="#">Why Eva Gems ?</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
                 </div>
             </div>
-        <script>jssor_1_slider_init();</script>
-        </section>
-        <h1>New Arrival</h1>
-        <p>Magisk in Recovery
-        In the case when your device does not have ramdisk in boot images, Magisk has no choice but to hijack the recovery
-        partition. For these devices, you will have to reboot to recovery every time you want Magisk enabled.
-        
-        When Magisk hijacks the recovery, there is a special mechanism to allow you to actually boot into recovery mode. Each
-        device model has its own key combo to boot into recovery, as an example for Galaxy S10 it is (Power + Bixby + Volume
-        Up). A quick search online should easily get you this info. As soon as you press the key combo and the device vibrates
-        with a splash screen, release all buttons to boot into Magisk. If you decide to boot into the actual recovery mode, long
-        press volume up until you see the recovery screen.</p>
-    </main>
-
-    <footer>
-        <div class="follow">
-            Follow us<br>
-            <a href="#">
-                <img src="resources/facebook.png" alt="facebook icon">
-            </a>
-            <a href="#">
-                <img src="resources/instagram.png" alt="instagram icon">
-            </a>
-        </div>
-
-        <hr>
-        <br>
-
-        <div class="footer-links">
-            <div class="help">
-                <div>Help</div><br>
-                <ul>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Free Life Time Warranty</a></li>
-                    <li><a href="#">Free Secure Shipping</a></li>
-                    <li><a href="#">Why Eva Gems ?</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms & Conditions</a></li>
-                    <li><a href="#">Delivery / Shipment Policy</a></li>
-                    <li><a href="#">Refund & Cancellation Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Refund policy</a></li>
-                </ul>
+            <div class="copyright">
+                <a href="index.html">&copy; Eva Fa</a>
             </div>
-            <div class="contact">
-                <div>Contact</div><br>
-                <ul>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Free Life Time Warranty</a></li>
-                    <li><a href="#">Free Secure Shipping</a></li>
-                    <li><a href="#">Why Eva Gems ?</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms & Conditions</a></li>
-                    <li><a href="#">Delivery / Shipment Policy</a></li>
-                </ul>
-            </div>
-            <div class="main menu">
-                <div>Main Menu</div><br>
-                <ul>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Free Life Time Warranty</a></li>
-                    <li><a href="#">Free Secure Shipping</a></li>
-                    <li><a href="#">Why Eva Gems ?</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="copyright">
-            <a href="index.html">&copy; Eva Fa</a>
-        </div>
-    </footer>
-    
+        </footer>
+    </div>
+
     <script defer src="script.js"></script>
 </body>
 
