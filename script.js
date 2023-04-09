@@ -3,7 +3,7 @@ const body = document.querySelector("body");
 const hamburger = document.getElementById("hamburg"); // hamburger it self
 const lines = document.querySelectorAll(".line"); // hamburger 3 lines
 const nav = document.getElementById("navbar"); // navbar
-const cartItem = document.getElementById("cart-item"); // Cart counter 
+const cartItem = document.getElementById("cart-item"); // Cart counter
 const cart = document.getElementById("cart"); // Cart Icon
 const cartSection = document.getElementById("cart-section"); // Cart section onclick
 const xIcon = document.getElementById("x-icon"); // X icon in the cart section
@@ -15,14 +15,14 @@ window.onload = function () {
   }, 1000);
 };
 
-pageContainer.addEventListener("click", e => {
-  if(nav.style.display == "block"){
+pageContainer.addEventListener("click", (e) => {
+  if (nav.style.display == "block") {
     nav.style.display = "none";
     lines.forEach((line) => line.classList.toggle("active"));
     pageContainer.style.filter = "blur(0px)";
     body.style.overflow = "visible";
   }
-  if(cartSection.style.display == "block"){
+  if (cartSection.style.display == "block") {
     cartSection.style.display = "none";
     pageContainer.style.filter = "blur(0px)";
     body.style.overflow = "visible";
@@ -39,12 +39,12 @@ hamburger.addEventListener("click", () => {
   } else {
     nav.style.display = "block";
     pageContainer.style.filter = "blur(3px)";
-  body.style.overflow = "hidden";
+    body.style.overflow = "hidden";
   }
   if (cartSection.style.display == "block") {
     cartSection.style.display = "none";
-  body.style.overflow = "visible";
-  } 
+    body.style.overflow = "visible";
+  }
 });
 
 // Event listener for the cart icon
@@ -52,7 +52,7 @@ cart.addEventListener("click", (e) => {
   e.preventDefault();
   if (nav.style.display == "block") {
     nav.style.display = "none";
-      lines.forEach((line) => line.classList.toggle("active"));
+    lines.forEach((line) => line.classList.toggle("active"));
   }
   cartSection.style.display = "block";
   cartSection.focus();
