@@ -1,13 +1,13 @@
 "use strict";
 const body = document.querySelector("body");
-const hamburger = document.getElementById("hamburg");
-const lines = document.querySelectorAll(".line");
-const nav = document.getElementById("navbar");
-const cartItem = document.getElementById("cart-item");
-const cart = document.getElementById("cart");
-const cartSection = document.getElementById("cart-section");
-const xIcon = document.getElementById("x-icon");
-const pageContainer = document.getElementById("page-container");
+const hamburger = document.getElementById("hamburg"); // hamburger it self
+const lines = document.querySelectorAll(".line"); // hamburger 3 lines
+const nav = document.getElementById("navbar"); // navbar
+const cartItem = document.getElementById("cart-item"); // Cart counter 
+const cart = document.getElementById("cart"); // Cart Icon
+const cartSection = document.getElementById("cart-section"); // Cart section onclick
+const xIcon = document.getElementById("x-icon"); // X icon in the cart section
+const pageContainer = document.getElementById("page-container"); // part of page that bluer.
 
 window.onload = function () {
   setInterval(() => {
@@ -19,9 +19,11 @@ pageContainer.addEventListener("click", e => {
   if(nav.style.display == "block"){
     nav.style.display = "none";
       lines.forEach((line) => line.classList.toggle("active"));
+  pageContainer.style.filter = "blur(0px)";
   }
   if(cartSection.style.display == "block"){
     cartSection.style.display = "none";
+  pageContainer.style.filter = "blur(0px)";
   }
 });
 
@@ -58,4 +60,3 @@ xIcon.addEventListener("click", (e) => {
   body.focus();
   body.style.overflow = "visible";
 });
-
