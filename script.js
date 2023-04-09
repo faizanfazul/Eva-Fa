@@ -18,29 +18,36 @@ window.onload = function () {
 pageContainer.addEventListener("click", e => {
   if(nav.style.display == "block"){
     nav.style.display = "none";
-      lines.forEach((line) => line.classList.toggle("active"));
-  pageContainer.style.filter = "blur(0px)";
+    lines.forEach((line) => line.classList.toggle("active"));
+    pageContainer.style.filter = "blur(0px)";
+    body.style.overflow = "visible";
   }
   if(cartSection.style.display == "block"){
     cartSection.style.display = "none";
-  pageContainer.style.filter = "blur(0px)";
+    pageContainer.style.filter = "blur(0px)";
+    body.style.overflow = "visible";
   }
 });
 
+// Event listener for the hamburger
 hamburger.addEventListener("click", () => {
   lines.forEach((line) => line.classList.toggle("active"));
   if (nav.style.display == "block") {
     nav.style.display = "none";
-  pageContainer.style.filter = "blur(0px)";
+    body.style.overflow = "visible";
+    pageContainer.style.filter = "blur(0px)";
   } else {
     nav.style.display = "block";
     pageContainer.style.filter = "blur(3px)";
+  body.style.overflow = "hidden";
   }
   if (cartSection.style.display == "block") {
     cartSection.style.display = "none";
+  body.style.overflow = "visible";
   } 
 });
 
+// Event listener for the cart icon
 cart.addEventListener("click", (e) => {
   e.preventDefault();
   if (nav.style.display == "block") {

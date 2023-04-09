@@ -167,7 +167,7 @@ nav li:hover {
 }
 
 #cart-section{
-  position: absolute;
+  position: fixed;
   display: none;
   right: 0;
   top: 0;
@@ -191,6 +191,12 @@ nav li:hover {
   position: absolute;
   top: 30px;
   right: 20px;
+}
+
+#x-icon:hover{
+  transform: rotate(360deg);
+  transition: 1s ease;
+  opacity: 0.8;
 }
 
 .wrapper{
