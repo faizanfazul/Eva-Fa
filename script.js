@@ -15,20 +15,6 @@ window.onload = function () {
   }, 1000);
 };
 
-pageContainer.addEventListener("click", (e) => {
-  if (nav.style.display == "block") {
-    nav.style.display = "none";
-    lines.forEach((line) => line.classList.toggle("active"));
-    pageContainer.style.filter = "blur(0px)";
-    body.style.overflow = "visible";
-  }
-  if (cartSection.style.display == "block") {
-    cartSection.style.display = "none";
-    pageContainer.style.filter = "blur(0px)";
-    body.style.overflow = "visible";
-  }
-});
-
 // Event listener for the hamburger
 hamburger.addEventListener("click", () => {
   lines.forEach((line) => line.classList.toggle("active"));
@@ -37,9 +23,10 @@ hamburger.addEventListener("click", () => {
     body.style.overflow = "visible";
     pageContainer.style.filter = "blur(0px)";
   } else {
-    nav.style.display = "block";
-    pageContainer.style.filter = "blur(3px)";
+    nav.focus();
     body.style.overflow = "hidden";
+    pageContainer.style.filter = "blur(3px)";
+    nav.style.display = "block";
   }
   if (cartSection.style.display == "block") {
     cartSection.style.display = "none";
@@ -66,4 +53,18 @@ xIcon.addEventListener("click", (e) => {
   pageContainer.style.filter = "blur(0px)";
   body.focus();
   body.style.overflow = "visible";
+});
+
+pageContainer.addEventListener("click", (e) => {
+  if (nav.style.display == "block") {
+    nav.style.display = "none";
+    lines.forEach((line) => line.classList.toggle("active"));
+    pageContainer.style.filter = "blur(0px)";
+    body.style.overflow = "visible";
+  }
+  if (cartSection.style.display == "block") {
+    cartSection.style.display = "none";
+    pageContainer.style.filter = "blur(0px)";
+    body.style.overflow = "visible";
+  }
 });
