@@ -9,6 +9,10 @@
   text-decoration: none;
 }
 
+body{
+  overflow: hidden;
+}
+
 header {
   background-color: #36454f;
   position: sticky;
@@ -47,7 +51,7 @@ option {
   background-color: #36454f;
 }
 
-.logo img{
+.logo img {
   width: 150px;
 }
 
@@ -140,6 +144,24 @@ nav li:hover {
 }
 /* Hamburger menu Ends */
 
+/* slider styles start */
+swiper-container {
+  width: 100%;
+}
+
+swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 82vh;
+}
+/* slider style ends */
+
 .logo {
   width: 130px;
   cursor: pointer;
@@ -162,11 +184,11 @@ nav li:hover {
   font-weight: bold;
 }
 
-#cart-section h2{
+#cart-section h2 {
   margin-top: 16px;
 }
 
-#cart-section{
+#cart-section {
   position: fixed;
   display: none;
   right: 0;
@@ -182,10 +204,10 @@ nav li:hover {
   padding-top: 10px;
 }
 
-#cart-section hr{
+#cart-section hr {
   margin-top: 40px;
 }
-#x-icon{
+#x-icon {
   width: 24px;
   cursor: pointer;
   position: absolute;
@@ -193,25 +215,25 @@ nav li:hover {
   right: 20px;
 }
 
-#x-icon:hover{
+#x-icon:hover {
   transform: rotate(360deg);
   transition: 1s ease;
   opacity: 0.8;
 }
 
-.wrapper{
+/* Loader styling strats*/
+.wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 200vh;
+  height: 100vh;
   width: 100%;
   z-index: 999;
-  position: absolute;
+  position: fixed;
   background-color: #fff;
-  top: -50%;
 }
 
-.ball{
+.ball {
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -220,21 +242,22 @@ nav li:hover {
   background-color: #e2cb99;
 }
 
-.two{
+.two {
   animation-delay: 0.25s;
 }
-.three{
-  animation-delay: 0.50s;
+.three {
+  animation-delay: 0.5s;
 }
-.four{
+.four {
   animation-delay: 0.75s;
 }
 
 @keyframes bounce {
-  50%{
+  50% {
     transform: translateY(25px);
   }
 }
+/* Loader styling ends */
 
 .follow {
   text-align: center;
@@ -258,7 +281,7 @@ hr {
   border-color: #e2cb99;
 }
 
-h1{
+h1 {
   text-align: center;
   animation: blink 1s infinite;
   text-transform: uppercase;
@@ -266,10 +289,10 @@ h1{
 }
 
 @keyframes blink {
-  0%{
+  0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 10;
   }
 }
@@ -305,6 +328,7 @@ footer {
   text-align: center;
   color: #fff;
 }
+
 /* styling for Mobiles */
 @media (max-width: 600px) {
   .hamburger {
@@ -315,11 +339,11 @@ footer {
   header {
     height: 65px;
   }
-.logo{
-   position: relative;
-  top: 3px;
-  z-index: 4;
-}
+  .logo {
+    position: relative;
+    top: 3px;
+    z-index: 4;
+  }
   nav {
     background-color: #36454f;
     display: none;
@@ -346,9 +370,9 @@ footer {
     line-height: 50px;
   }
 
-h1{
-  font-size: 1.5rem;
-}
+  h1 {
+    font-size: 1.5rem;
+  }
 
   .icons-section {
     display: flex;
@@ -366,7 +390,7 @@ h1{
     left: 45px;
     top: 22px;
   }
-  #x-icon{
+  #x-icon {
     width: 20px;
     cursor: pointer;
     position: absolute;
@@ -374,21 +398,21 @@ h1{
     right: 23px;
   }
 
-#cart-section h2{
-  margin-top: 7px;
-}
+  #cart-section h2 {
+    margin-top: 7px;
+  }
 
-#cart-section{
-  width: 60%;
-}
+  #cart-section {
+    width: 60%;
+  }
 
-#cart-section hr{
-  margin-top: 20px;
-}
+  #cart-section hr {
+    margin-top: 20px;
+  }
   .icons {
     width: 22px;
   }
-  .logo img{
+  .logo img {
     width: 110px;
   }
   .footer-links {
@@ -403,30 +427,29 @@ h1{
 }
 /* media for tablets */
 @media only screen and (min-width: 700px) and (max-width: 1023px) {
- 
-.icons-section {
-  position: absolute;
-  top: 30px;
-  left: 80%;
-  column-gap: 10px;
-}
-nav ul {
-  display: flex;
-  column-gap: 60px;
-}
-#cart-section{
-  width: 40%;
-}
+  .icons-section {
+    position: absolute;
+    top: 30px;
+    left: 80%;
+    column-gap: 10px;
+  }
+  nav ul {
+    display: flex;
+    column-gap: 60px;
+  }
+  #cart-section {
+    width: 40%;
+  }
 
-#cart-section hr{
-  margin-top: 50px;
-}
+  #cart-section hr {
+    margin-top: 50px;
+  }
 
-#x-icon{
-  width: 24px;
-  cursor: pointer;
-  position: absolute;
-  top: 30px;
-  right: 20px;
-}
+  #x-icon {
+    width: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+  }
 }

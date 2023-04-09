@@ -9,11 +9,12 @@ const cartSection = document.getElementById("cart-section"); // Cart section onc
 const xIcon = document.getElementById("x-icon"); // X icon in the cart section
 const pageContainer = document.getElementById("page-container"); // part of page that bluer.
 
-window.onload = function () {
-  setInterval(() => {
-    document.querySelector(".wrapper").style.display = "none";
-  }, 1000);
-};
+window.addEventListener("load", e => {
+    setTimeout(() => {
+      document.querySelector(".wrapper").style.display = "none";
+      body.style.overflow = "visible";
+    }, 1000);
+});
 
 // Event listener for the hamburger
 hamburger.addEventListener("click", () => {
