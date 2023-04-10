@@ -9,7 +9,7 @@
   text-decoration: none;
 }
 
-body{
+body {
   overflow: hidden;
 }
 
@@ -202,6 +202,7 @@ swiper-slide img {
   color: #e2cb99;
   height: 100vh;
   padding-top: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);  
 }
 
 #cart-section hr {
@@ -221,7 +222,7 @@ swiper-slide img {
   opacity: 0.8;
 }
 
-/* Loader styling strats*/
+/* Loader styling starts*/
 .wrapper {
   display: flex;
   justify-content: center;
@@ -350,10 +351,11 @@ footer {
     position: absolute;
     top: 0;
     padding: 100px 10px 700px 10px;
-    width: 50%;
+    width: 60%;
     z-index: 20;
     height: 100vh;
     overflow: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);  
   }
 
   nav ul {
@@ -390,6 +392,9 @@ footer {
     left: 45px;
     top: 22px;
   }
+  swiper-slide img {
+    height: 32vh;
+  }
   #x-icon {
     width: 20px;
     cursor: pointer;
@@ -403,7 +408,7 @@ footer {
   }
 
   #cart-section {
-    width: 60%;
+    width: 70%;
   }
 
   #cart-section hr {
@@ -436,6 +441,9 @@ footer {
   nav ul {
     display: flex;
     column-gap: 60px;
+  }
+    swiper-slide img {
+    height: 32vh;
   }
   #cart-section {
     width: 40%;
