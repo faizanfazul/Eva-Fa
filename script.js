@@ -31,7 +31,7 @@ hamburger.addEventListener("click", () => {
   }
   if (cartSection.style.display == "block") {
     cartSection.style.display = "none";
-    body.style.overflow = "visible";
+    body.style.overflow = "hidden";
   }
 });
 
