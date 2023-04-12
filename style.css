@@ -159,6 +159,7 @@ swiper-slide img {
   display: block;
   width: 100%;
   height: 82vh;
+  cursor: grab;
 }
 /* slider style ends */
 
