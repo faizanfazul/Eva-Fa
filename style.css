@@ -162,6 +162,20 @@ nav li:hover {
   object-fit: cover;
 }
 
+.swiper-slide img:hover{
+  transform: scale(1.05);
+  transition: transform 1s ease-in-out;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #fff;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #fff;
+}
+
 .autoplay-progress {
   position: absolute;
   right: 16px;
