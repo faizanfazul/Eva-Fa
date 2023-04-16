@@ -149,6 +149,11 @@ nav li:hover {
 /* Hamburger menu Ends */
 
 /* slider styles start */
+.swiper-wrapper {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
 .swiper {
   height: 80vh;
 }

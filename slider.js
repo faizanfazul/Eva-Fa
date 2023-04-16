@@ -9,6 +9,11 @@ var swiper = new Swiper(".mySwiper", {
   centeredSlides: true,
   effect:"coverflow",
   lazy:true,
+  lazy: {
+    loadOnTransitionStart: true,
+    loadPrevNext: true,
+    checkInView: true
+  },
   autoplay: {
     delay: 3000,
     disableOnInteraction: false,
