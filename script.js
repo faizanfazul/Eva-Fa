@@ -15,39 +15,33 @@ window.addEventListener("load", e => {
       body.style.overflow = "visible";
     }, 1000);
 });
-
 // Event listener for the hamburger
 hamburger.addEventListener("click", () => {
   lines.forEach((line) => line.classList.toggle("active"));
-  if (nav.style.display == "block") {
-    nav.style.display = "none";
-    body.style.overflow = "visible";
-    pageContainer.style.filter = "blur(0px)";
-  } else {
-    nav.focus();
-    body.style.overflow = "hidden";
-    pageContainer.style.filter = "blur(3px)";
-    nav.style.display = "block";
-  }
-  if (cartSection.style.display == "block") {
-    cartSection.style.display = "none";
-    body.style.overflow = "hidden";
-  }
+  if(nav.style.display == "block"){
+  nav.style.display = "none";
+  body.style.overflow = "visible";
+  pageContainer.style.filter = "blur(0px)";
+  }else{
+  nav.focus();
+  body.style.overflow = "hidden";
+  pageContainer.style.filter = "blur(3px)";
+  nav.style.display = "block";}
+  if(cartSection.style.display == "block") {
+  cartSection.style.display = "none";
+  body.style.overflow = "hidden";}
 });
-
 // Event listener for the cart icon
 cart.addEventListener("click", (e) => {
   e.preventDefault();
-  if (nav.style.display == "block") {
-    nav.style.display = "none";
-    lines.forEach((line) => line.classList.toggle("active"));
-  }
+  if(nav.style.display == "block") {
+  nav.style.display = "none";
+  lines.forEach((line) => line.classList.toggle("active"));}
   cartSection.style.display = "block";
   cartSection.focus();
   pageContainer.style.filter = "blur(3px)";
   body.style.overflow = "hidden";
 });
-
 xIcon.addEventListener("click", (e) => {
   e.preventDefault();
   cartSection.style.display = "none";
@@ -55,17 +49,14 @@ xIcon.addEventListener("click", (e) => {
   body.focus();
   body.style.overflow = "visible";
 });
-
 pageContainer.addEventListener("click", (e) => {
-  if (nav.style.display == "block") {
+    if(nav.style.display == "block"){
     nav.style.display = "none";
     lines.forEach((line) => line.classList.toggle("active"));
     pageContainer.style.filter = "blur(0px)";
     body.style.overflow = "visible";
-  }
-  if (cartSection.style.display == "block") {
+    }if (cartSection.style.display == "block") {
     cartSection.style.display = "none";
     pageContainer.style.filter = "blur(0px)";
-    body.style.overflow = "visible";
-  }
+    body.style.overflow = "visible";}
 });
