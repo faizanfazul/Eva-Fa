@@ -152,11 +152,6 @@ nav li:hover {
 .swiper {
   height: 80vh;
 }
-.swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .swiper-slide img {
   display: block;
