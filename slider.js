@@ -1,18 +1,15 @@
 "use strict";
-const progressCircle = document.querySelector(".autoplay-progress svg");
-const progressContent = document.querySelector(".autoplay-progress span");
-
 // for main slider
-var swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper(".main-swiper", {
   spaceBetween: 10,
-  loop:true,
+  loop: true,
   centeredSlides: true,
-  effect:"coverflow",
-  lazy:true,
+  effect: "coverflow",
+  lazy: true,
   lazy: {
     loadOnTransitionStart: true,
     loadPrevNext: true,
-    checkInView: true
+    checkInView: true,
   },
   autoplay: {
     delay: 3000,
@@ -26,4 +23,10 @@ var swiper = new Swiper(".mySwiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+});
+// for New arrival products slider
+var swiper = new Swiper(".new-arrival-swiper", {
+  slidesPerView: 3,
+  spaceBetween: 10,
+  loop: true,
 });

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="resources/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
     <title>Eva Fa</title>
 </head>
@@ -92,41 +92,36 @@
 
     <div id="page-container">
         <main>
-            <!--Main Slider -->
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <!--! choose very small sized images and with same height and width -->
-                    <div class="swiper-slide"><img src="resources/slide-1.jpg" alt="slide image 1"></div>
-                    <div class="swiper-slide"><img src="resources/slide-2.jpg" alt="slide image 2"></div>
-                    <div class="swiper-slide"><img src="resources/slide-3.jpg" alt="slide image 3"></div>
+            <section class="main-swiper-section">
+                <!--Main Slider -->
+                <div class="main-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="resources/slide-1.jpg" alt="slide image 1"></div>
+                        <div class="swiper-slide"><img src="resources/slide-2.jpg" alt="slide image 2"></div>
+                        <div class="swiper-slide"><img src="resources/slide-3.jpg" alt="slide image 3"></div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
-            </div>
-
-            <h1>New Arrival</h1>
-
-            <p>Magisk in Recovery In the case when your device does not have ramdisk in boot images, Magisk has no
-                choice but to
-                hijack
-                the recovery
-                partition. For these devices, you will have to reboot to recovery every time you want Magisk
-                enabled.
-
-                When Magisk hijacks the recovery, there is a special mechanism to allow you to actually boot into
-                recovery mode. Each
-                device model has its own key combo to boot into recovery, as an example for Galaxy S10 it is (Power
-                +
-                Bibbs + Volume
-                Up). A quick search online should easily get you this info. As soon as you press the key combo and
-                the
-                device vibrates
-                with a splash screen, release all buttons to boot into Magisk. If you decide to boot into the actual
-                recovery mode, long
-                press volume up until you see the recovery screen.</p>
+            </section>
+            <section class="New-Arrivals">
+                <h1>New Arrival</h1>
+                <!-- New Arrival products slider -->
+                <div class="new-arrival-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="resources/ring-1.jpg" alt="ring-1"></div>
+                        <div class="swiper-slide"><img src="resources/ring-2.jpg" alt="ring-2"></div>
+                        <div class="swiper-slide"><img src="resources/ring-3.jpg" alt="ring-3"></div>
+                        <div class="swiper-slide"><img src="resources/ring-4.jpg" alt="ring-4"></div>
+                        <div class="swiper-slide"><img src="resources/ring-5.jpg" alt="ring-5"></div>
+                        <div class="swiper-slide"><img src="resources/ring-6.jpg" alt="ring-6"></div>
+                    </div>
+                </div>
+            </section>
+            
         </main>
-
+<br><br>
         <footer>
             <div class="follow">
                 Follow us<br>
