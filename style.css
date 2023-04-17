@@ -15,7 +15,6 @@
 
 body {
   overflow: hidden;
-  background-color: #ccc;
 }
 
 header {
@@ -180,7 +179,7 @@ nav li:hover {
 }
 
 .New-Arrivals .new-arrival-swiper{
-  height: 40vh;
+  height: 300px;
   width: 100%;
   overflow: hidden;
 }
@@ -188,6 +187,8 @@ nav li:hover {
 .New-Arrivals .swiper-slide{
   border-radius: 20px;
   overflow: hidden;
+  cursor: pointer;
+  position: relative;
 }
 
 .New-Arrivals .swiper-slide img{
@@ -195,6 +196,12 @@ nav li:hover {
   height: 100%;
   display: block;
   object-fit: cover;
+  position: absolute;
+}
+
+.New-Arrivals .swiper-slide img:hover{
+  transform: scale(1.1);
+  transition: transform 0.5s ease-in-out;
 }
 /* slider style ends */
 
@@ -334,6 +341,24 @@ h1 {
   }
 }
 
+.whatsapp{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  padding: 10px;
+  z-index: 900;
+  background-color: #a2ff68;
+  border-radius: 50%;
+}
+
+.whatsapp img{
+  width: 50px;
+}
+.whatsapp img:hover{
+  width: 50px;
+  opacity: 0.9;
+}
+
 footer {
   background-color: #36454f;
   padding: 20px 0px 20px 0px;
@@ -364,6 +389,19 @@ footer {
   display: block;
   text-align: center;
   color: #fff;
+}
+
+@media (max-width: 350px) {
+.currency select,option {
+  font-size: 0.8rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin-left: 10px;
+} 
+.New-Arrivals .new-arrival-swiper{
+  height: 150px;
+}
 }
 
 /* styling for Mobiles */
@@ -456,6 +494,9 @@ footer {
   .icons {
     width: 22px;
   }
+  .New-Arrivals .new-arrival-swiper{
+  height: 200px;
+}
   .logo img {
     width: 110px;
   }

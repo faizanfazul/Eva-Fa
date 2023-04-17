@@ -26,7 +26,23 @@ var swiper = new Swiper(".main-swiper", {
 });
 // for New arrival products slider
 var swiper = new Swiper(".new-arrival-swiper", {
-  slidesPerView: 3,
   spaceBetween: 10,
-  loop: true,
+  breakpoints: {
+    350: {
+      slidesPerView: 2,
+      spaceBetween: 5,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 10,
+    },
+    992: {
+      slidesPerView: 4,
+      spaceBetween: 10,
+    },
+    1400: {
+      slidesPerView: 5,
+      spaceBetween: 10,
+    },
+  },
 });
