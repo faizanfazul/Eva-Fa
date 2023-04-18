@@ -21,11 +21,11 @@ hamburger.addEventListener("click", () => {
   if(nav.style.display == "block"){
   nav.style.display = "none";
   body.style.overflow = "visible";
-  pageContainer.style.filter = "blur(0px)";
+  pageContainer.style.display = "none";
   }else{
   nav.focus();
   body.style.overflow = "hidden";
-  pageContainer.style.filter = "blur(3px)";
+  pageContainer.style.display = "block";
   nav.style.display = "block";}
   if(cartSection.style.display == "block") {
   cartSection.style.display = "none";
@@ -39,13 +39,13 @@ cart.addEventListener("click", (e) => {
   lines.forEach((line) => line.classList.toggle("active"));}
   cartSection.style.display = "block";
   cartSection.focus();
-  pageContainer.style.filter = "blur(3px)";
+  pageContainer.style.display = "block";
   body.style.overflow = "hidden";
 });
 xIcon.addEventListener("click", (e) => {
   e.preventDefault();
   cartSection.style.display = "none";
-  pageContainer.style.filter = "blur(0px)";
+  pageContainer.style.display = "none";
   body.focus();
   body.style.overflow = "visible";
 });
@@ -53,10 +53,10 @@ pageContainer.addEventListener("click", (e) => {
     if(nav.style.display == "block"){
     nav.style.display = "none";
     lines.forEach((line) => line.classList.toggle("active"));
-    pageContainer.style.filter = "blur(0px)";
+    pageContainer.style.display = "none";
     body.style.overflow = "visible";
     }if (cartSection.style.display == "block") {
     cartSection.style.display = "none";
-    pageContainer.style.filter = "blur(0px)";
+    pageContainer.style.display = "none";
     body.style.overflow = "visible";}
 });
