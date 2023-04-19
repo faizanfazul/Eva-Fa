@@ -85,20 +85,42 @@ nav {
   align-items: center;
 }
 
-nav ul {
+nav > ul {
   display: flex;
   column-gap: 100px;
 }
 
-nav li {
+nav > ul > li {
   text-transform: uppercase;
   color: #e2cb99;
   cursor: pointer;
+  position: relative;
 }
 
-nav li:hover {
+nav li a{
+  text-decoration: none;
+  color: #e2cb99;
+}
+
+nav li a:hover {
   color: #fff;
   transition: all 0.5s ease-in-out;
+}
+
+nav > ul > li > ul {
+  position: absolute;
+  left: -10px;
+  top: 22px;
+  display: none;
+  background-color: #36454f;
+  padding: 0px 10px 5px 10px;
+}
+
+nav > ul > li:hover > ul {
+  display: block;
+}
+nav > ul > li:hover > ul >li {
+  display: block;
 }
 
 .icons {
@@ -434,6 +456,16 @@ footer {
 }
 
 @media (max-width: 350px) {
+  nav > ul > li > ul {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  display: none;
+}
+nav > ul > li:hover > ul {
+  transition: display 3s ease-in;
+  display: block;
+}
   .currency select,
   option {
     font-size: 0.8rem;
@@ -475,6 +507,17 @@ footer {
   header {
     height: 65px;
   }
+  nav > ul > li > ul {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  display: none;
+}
+nav > ul > li:hover > ul {
+  transition: display 3s ease-in;
+  display: block;
+}
+
   .logo {
     position: relative;
     top: 3px;
@@ -500,7 +543,6 @@ footer {
 
   nav li {
     text-transform: uppercase;
-    border-bottom: 1px solid #fff;
     font-size: 1.2rem;
     color: #e2cb99;
     cursor: pointer;
@@ -531,7 +573,7 @@ footer {
     height: 30vh;
   }
   #x-icon {
-    width: 20px;
+    width: 22px;
     cursor: pointer;
     position: absolute;
     top: 22px;
