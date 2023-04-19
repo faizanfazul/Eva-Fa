@@ -451,11 +451,14 @@ footer {
   .whatsapp img {
     width: 40px;
   }
+  .about-product{
+    gap: 0;
+  }
   .product-title {
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
   .product-price {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
 }
 
@@ -546,8 +549,11 @@ footer {
   #cart-section hr {
     margin-top: 20px;
   }
+  .about-product{
+    gap: 3px;
+  }
   .product-title {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   .icons {
     width: 22px;
