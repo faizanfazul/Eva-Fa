@@ -28,20 +28,24 @@ var swiper = new Swiper(".main-swiper", {
 var swiper = new Swiper(".new-arrival-swiper", {
   spaceBetween: 10,
   breakpoints: {
-    350: {
+    295: {
       slidesPerView: 2,
       spaceBetween: 5,
     },
-    768: {
+    400: {
       slidesPerView: 3,
-      spaceBetween: 10,
+      spaceBetween: 5,
     },
-    992: {
+    768: {
       slidesPerView: 4,
       spaceBetween: 10,
     },
-    1400: {
+    992: {
       slidesPerView: 5,
+      spaceBetween: 10,
+    },
+    1400: {
+      slidesPerView: 6,
       spaceBetween: 10,
     },
   },

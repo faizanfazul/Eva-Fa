@@ -27,13 +27,13 @@ header {
   z-index: 200;
 }
 
-h1{
+h1 {
   font-size: 2rem;
 }
 
-#page-container{
+#page-container {
   width: 100%;
-  height: 240%;
+  height: 400%;
   position: absolute;
   top: 0;
   left: 0;
@@ -163,59 +163,6 @@ nav li:hover {
 }
 /* Hamburger menu Ends */
 
-/* slider styles start */
-.swiper-wrapper {
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-
-.main-swiper {
-  height: 80vh;
-  overflow: hidden;
-}
-
-.main-swiper-section .swiper-slide img {
-  cursor: grabbing;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.main-swiper-section .swiper-button-prev,.swiper-button-next {
-  color: #fff;
-}
-
-.main-swiper-section .swiper-pagination-bullet-active {
-  background-color: #fff;
-}
-
-.New-Arrivals .new-arrival-swiper{
-  height: 300px;
-  width: 100%;
-  overflow: hidden;
-}
-
-.New-Arrivals .swiper-slide{
-  border-radius: 20px;
-  overflow: hidden;
-  cursor: pointer;
-  position: relative;
-}
-
-.New-Arrivals .swiper-slide img{
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  position: absolute;
-}
-
-.New-Arrivals .swiper-slide img:hover{
-  transform: scale(1.1);
-  transition: transform 0.5s ease-in-out;
-}
-/* slider style ends */
-
 .logo {
   width: 130px;
   cursor: pointer;
@@ -314,6 +261,91 @@ nav li:hover {
 }
 /* Loader styling ends */
 
+/* slider styles start */
+.swiper-wrapper {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.main-swiper {
+  height: 80vh;
+  overflow: hidden;
+}
+
+.main-swiper-section .swiper-slide img {
+  cursor: grabbing;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main-swiper-section .swiper-button-prev,
+.swiper-button-next {
+  color: #fff;
+}
+
+.main-swiper-section .swiper-pagination-bullet-active {
+  background-color: #fff;
+}
+
+.New-Arrivals .new-arrival-swiper {
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.New-Arrivals .swiper-slide {
+  border-radius: 20px 20px 0px 0px;
+  overflow: hidden;
+  position: relative;
+  height: 298px;
+}
+
+.New-Arrivals .swiper-slide img {
+  width: 100%;
+  height: 70%;
+  display: block;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.New-Arrivals .swiper-slide img:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s ease-in-out;
+}
+/* slider style ends */
+
+/* product card styling starts */
+.about-product {
+  width: 100%;
+  height: 40%;
+  background-color: #F1F2F3;
+  border-radius: 20px 20px 0px 0px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 6px;
+}
+
+.product-title {
+  color: #000;
+  text-decoration: none;
+  font-size: 1.3rem;
+  margin: 0px 10px 0px 10px;
+}
+
+.product-price {
+  font-size: 1rem;
+}
+/* product card styling ends */
+
 .follow {
   text-align: center;
   text-transform: uppercase;
@@ -352,7 +384,7 @@ h1 {
   }
 }
 
-.whatsapp{
+.whatsapp {
   position: fixed;
   right: 10px;
   bottom: 10px;
@@ -362,10 +394,10 @@ h1 {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
   border-radius: 50%;
 }
-.whatsapp img{
+.whatsapp img {
   width: 50px;
 }
-.whatsapp img:hover{
+.whatsapp img:hover {
   opacity: 0.8;
 }
 
@@ -402,26 +434,36 @@ footer {
 }
 
 @media (max-width: 350px) {
-.currency select,option {
-  font-size: 0.8rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  margin-left: 10px;
-} 
-.New-Arrivals .new-arrival-swiper{
-  height: 150px;
-}
-.whatsapp img{
-  width: 40px;
-}
+  .currency select,
+  option {
+    font-size: 0.8rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin-left: 10px;
+  }
+  .New-Arrivals .new-arrival-swiper {
+    height: 150px;
+  }
+  .New-Arrivals .swiper-slide {
+    height: 148px;
+  }
+  .whatsapp img {
+    width: 40px;
+  }
+  .product-title {
+    font-size: 1rem;
+  }
+  .product-price {
+    font-size: 0.7rem;
+  }
 }
 
 /* styling for Mobiles */
 @media (max-width: 600px) {
   :root {
-  --swiper-navigation-size: 1.7rem !important;
-}
+    --swiper-navigation-size: 1.7rem !important;
+  }
   .hamburger {
     display: flex;
     top: 20px;
@@ -482,9 +524,9 @@ footer {
     left: 45px;
     top: 22px;
   }
-  .main-swiper{
-  height: 30vh;
-}
+  .main-swiper {
+    height: 30vh;
+  }
   #x-icon {
     width: 20px;
     cursor: pointer;
@@ -504,15 +546,21 @@ footer {
   #cart-section hr {
     margin-top: 20px;
   }
+  .product-title {
+    font-size: 1.2rem;
+  }
   .icons {
     width: 22px;
   }
-  .whatsapp img{
-  width: 40px;
-}
-  .New-Arrivals .new-arrival-swiper{
-  height: 200px;
-}
+  .whatsapp img {
+    width: 40px;
+  }
+  .New-Arrivals .new-arrival-swiper {
+    height: 240px;
+  }
+  .New-Arrivals .swiper-slide {
+    height: 238px;
+  }
   .logo img {
     width: 110px;
   }
@@ -538,9 +586,9 @@ footer {
     display: flex;
     column-gap: 60px;
   }
-.main-swiper{
-  height: 32vh;
-}
+  .main-swiper {
+    height: 32vh;
+  }
   #cart-section {
     width: 40%;
   }
@@ -555,5 +603,8 @@ footer {
     position: absolute;
     top: 30px;
     right: 20px;
+  }
+  .product-title {
+    font-size: 1.2rem;
   }
 }
