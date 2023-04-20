@@ -124,12 +124,14 @@ nav > ul > li:hover > ul {
 
 nav > ul > li > ul > li {
   line-height: 32px;
+  text-transform: capitalize;
   font-size: 0.95rem;
 }
-
-nav > ul > li:hover > ul > li {
-  display: block;
+nav > ul > li > ul > li:hover {
+  transform: translateX(4px);
+  transition:  transform 0.3s ease-in-out;
 }
+
 nav > ul > li:hover .pointing-arrow {
   transition: transform 0.3s ease-in-out;
   transform: rotate(90deg);
