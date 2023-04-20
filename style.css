@@ -113,12 +113,20 @@ nav > ul > li > ul {
   top: 22px;
   display: none;
   background-color: #36454f;
-  padding: 0px 10px 5px 10px;
+  padding: 0px 10px 0px 10px;
+  min-width: 100%;
+  border-radius: 2px;
 }
 
 nav > ul > li:hover > ul {
   display: block;
 }
+
+nav > ul > li > ul > li {
+  line-height: 32px;
+  font-size: 0.95rem;
+}
+
 nav > ul > li:hover > ul > li {
   display: block;
 }
@@ -129,8 +137,9 @@ nav > ul > li:hover .pointing-arrow {
 .pointing-arrow {
   display: inline-block;
   font-size: 0.8rem;
+  margin-left: 5px;
 }
-.shop:hover .pointing-arrow {
+.navigation:hover .pointing-arrow {
   transition: transform 0.3s ease-in-out;
   transform: rotate(90deg);
 }
