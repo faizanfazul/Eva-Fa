@@ -50,7 +50,7 @@
         <!-- icons in the header -->
         <div class="icons-section">
             <a href="#">
-                <img src="resources/search.png" alt="Search icon" class="icons">
+                <img src="resources/search.png" alt="Search icon" class="icons" id="search-icon">
             </a>
             <a href="#">
                 <img src="resources/wishlist.png" alt="Heart icon" class="icons">
@@ -106,13 +106,11 @@
 
     <main>
         <!-- Search Bar -->
-        <div class="search-bar-container">
+        <div class="search-bar-container" id="search-container">
             <form class="search-form" action="">
-                <img src="resources/search.png" alt="Search icon" width="35"
-                    style="position:absolute; top:26px;padding-left:10px;">
-                <img src="resources/X.png" alt="X icon" width="30"
-                    style="position:absolute; top:26px;padding-left:10px; right: 10px;" id="search-X">
-                <input type="search" id="search-input" placeholder="Search...">
+                <img src="resources/search.png" alt="Search icon">
+                <img src="resources/X.png" alt="X icon" onclick="closeSearch()">
+                <input type="search" id="search-input" placeholder="Search..." tabindex="1">
             </form>
             <div id="search-results">
 

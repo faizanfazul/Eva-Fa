@@ -48,7 +48,7 @@ h1 {
   align-items: center;
   position: absolute;
   top: 30px;
-  left: 88%;
+  left: 87%;
   column-gap: 10px;
 }
 
@@ -270,11 +270,12 @@ nav > ul > li:hover .pointing-arrow {
   top: 118px;
   width: 100%;
   z-index: 299;
-  height: auto;
+  height: 60%;
+  display: none;
 }
 #search-input {
   width: 100%;
-  outline: 1px solid #e2cb99;
+  outline: 2px solid #e2cb99;
   padding-left: 50px;
   padding-right: 50px;
   border: none;
@@ -283,6 +284,20 @@ nav > ul > li:hover .pointing-arrow {
   text-transform: uppercase;
   letter-spacing: 3px;
 }
+.search-form img:nth-child(1) {
+  width: 35px;
+  position: absolute;
+  top: 26px;
+  padding-left: 10px;
+}
+.search-form img:nth-child(2) {
+  width: 30px;
+  position: absolute;
+  top: 26px;
+  right: 10px;
+  padding-left: 10px;
+  cursor: pointer;
+}
 #search-input::placeholder {
   font-size: 1.5rem;
   text-transform: uppercase;
@@ -290,12 +305,18 @@ nav > ul > li:hover .pointing-arrow {
 }
 #search-results {
   overflow-y: scroll;
-  max-height: 500px;
+  max-height: 100%;
   background-color: #fff;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
+}
+.search-product {
+  width: 220px;
+  height: 260px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 /* Customize Algolia search input */
 
@@ -526,6 +547,13 @@ footer {
   .search-bar-container {
     top: 70px;
   }
+  #search-input {
+    height: 60px;
+    font-size: 1.2rem;
+  }
+  #search-input::placeholder {
+    font-size: 1.2rem;
+  }
   .New-Arrivals .new-arrival-swiper {
     height: 150px;
   }
@@ -600,6 +628,27 @@ footer {
   .search-bar-container {
     top: 70px;
   }
+  .search-form img:nth-child(1) {
+    width: 25px;
+    position: absolute;
+    top: 20px;
+    padding-left: 10px;
+  }
+  .search-form img:nth-child(2) {
+    width: 20px;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    padding-left: 10px;
+  }
+  #search-input {
+    height: 60px;
+    font-size: 1.2rem;
+  }
+  #search-input::placeholder {
+    font-size: 1.2rem;
+  }
+
   h1 {
     font-size: 1.5rem;
   }

@@ -7,8 +7,11 @@ const cartItem = document.getElementById("cart-item"); // Cart counter
 const cart = document.getElementById("cart"); // Cart Icon
 const cartSection = document.getElementById("cart-section"); // Cart section onclick
 const xIcon = document.getElementById("x-icon"); // X icon in the cart section
-const searchX = document.getElementById("search-X"); // X icon in the search
 const pageContainer = document.getElementById("page-container"); // part of page that blur.
+const searchContainer = document.getElementById("search-container"); // search container.
+const searchButton = document.getElementById("search-icon"); // search container.
+const Input = document.getElementById("search-input"); // search input.
+const SearchResult = document.getElementById("search-results"); // search input.
 
 window.addEventListener("load", (e) => {
   setTimeout(() => {
@@ -32,6 +35,10 @@ hamburger.addEventListener("click", () => {
   if (cartSection.style.display == "block") {
     cartSection.style.display = "none";
     body.style.overflow = "hidden";
+  }
+  if (searchContainer.style.display == "block") {
+    searchContainer.style.display = "none";
+    body.style.overflow = "visible";
   }
 });
 // Event listener for the cart icon
@@ -65,4 +72,23 @@ pageContainer.addEventListener("click", (e) => {
     pageContainer.style.display = "none";
     body.style.overflow = "visible";
   }
+});
+function closeSearch() {
+  searchContainer.style.display = "none";
+  pageContainer.style.display = "none";
+  body.focus();
+  body.style.overflow = "visible";
+  Input.value = "";
+  SearchResult.innerHTML = "";
+}
+searchButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (nav.style.display == "block") {
+    nav.style.display = "none";
+    lines.forEach((line) => line.classList.toggle("active"));
+  }
+  searchContainer.style.display = "block";
+  Input.focus();
+  pageContainer.style.display = "block";
+  body.style.overflow = "hidden";
 });

@@ -6,7 +6,7 @@ const searchResults = document.querySelector("#search-results");
 
 searchInput.addEventListener("input", (event) => {
   const query = event.target.value;
-  if (query.length >= 3) {
+  if (query.length >= 2) {
     index.search(query, (err, { hits } = {}) => {
       if (err) {
         console.error(err);
@@ -22,7 +22,21 @@ function renderSearchResults(results) {
   searchResults.innerHTML = "";
 
   results.forEach((result) => {
-    const resultHtml = `<div class="product" style="width: 280px; margin-top: 10px;">
+    const resultHtml = `
+                <style>
+                    .product{
+                        width: 240px;
+                        height:260px;
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                      }
+                      @media (max-width: 600px) {
+                          .product{
+                              width: 45%
+                          }
+                      }
+                    </style>
+          <div class="product">
                 <a href="#">
                     <img src="${result.product_image}" alt="${result.product_alt}">
                 </a>
