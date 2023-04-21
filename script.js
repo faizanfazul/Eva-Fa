@@ -7,7 +7,8 @@ const cartItem = document.getElementById("cart-item"); // Cart counter
 const cart = document.getElementById("cart"); // Cart Icon
 const cartSection = document.getElementById("cart-section"); // Cart section onclick
 const xIcon = document.getElementById("x-icon"); // X icon in the cart section
-const pageContainer = document.getElementById("page-container"); // part of page that bluer.
+const searchX = document.getElementById("search-X"); // X icon in the search
+const pageContainer = document.getElementById("page-container"); // part of page that blur.
 
 window.addEventListener("load", (e) => {
   setTimeout(() => {

@@ -68,7 +68,7 @@
         <!-- navbar starts -->
         <nav id="navbar">
             <ul>
-                <li><a href="#" class="navigation">Shop<span class="pointing-arrow"> &#10095;</span></a>
+                <li><a href="#">Shop<span class="pointing-arrow"> &#10095;</span></a>
                     <ul>
                         <li><a href="#">bracelets</a></li>
                         <li><a href="#">Rings</a></li>
@@ -77,35 +77,51 @@
                     </ul>
                 </li>
 
-                <li><a href="#" class="shop">Gifting Ideas<span class="pointing-arrow"> &#10095;</span></a>
+                <li><a href="#">Gifting Ideas<span class="pointing-arrow"> &#10095;</span></a>
                     <ul>
                         <li><a href="#">Gift for her</a></li>
                         <li><a href="#">Gift for him</a></li>
                     </ul>
                 </li>
 
-                <li><a href="#" class="shop">Accessories<span class="pointing-arrow"> &#10095;</span></a>
+                <li><a href="#">Accessories<span class="pointing-arrow"> &#10095;</span></a>
                     <ul>
                         <li><a href="#">Boxes</a></li>
                     </ul>
                 </li>
 
-                <li><a href="#" class="shop">Watches<span class="pointing-arrow"> &#10095;</span></a>
+                <li><a href="#">Watches<span class="pointing-arrow"> &#10095;</span></a>
                     <ul>
                         <li><a href="#">men</a></li>
                         <li><a href="#">woman</a></li>
                     </ul>
                 </li>
+
                 <li><a href="#">About us</a></li>
             </ul>
         </nav>
     </header>
 
-    <div id="page-container">
-    </div>
+    <div id="page-container"></div>
+
     <main>
+        <!-- Search Bar -->
+        <div class="search-bar-container">
+            <form class="search-form" action="">
+                <img src="resources/search.png" alt="Search icon" width="35"
+                    style="position:absolute; top:26px;padding-left:10px;">
+                <img src="resources/X.png" alt="X icon" width="30"
+                    style="position:absolute; top:26px;padding-left:10px; right: 10px;" id="search-X">
+                <input type="search" id="search-input" placeholder="Search...">
+            </form>
+            <div id="search-results">
+
+            </div>
+        </div>
+        <!-- Search Bar Ends -->
+
+        <!--Main Slider -->
         <section class="main-swiper-section">
-            <!--Main Slider -->
             <div class="main-swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide"><img src="resources/slide-1.jpg" alt="slide image 1"></div>
@@ -117,75 +133,87 @@
                 <div class="swiper-pagination"></div>
             </div>
         </section>
+        <!-- New Arrival products slider -->
         <section class="New-Arrivals">
             <h1>New Arrival</h1>
-            <!-- New Arrival products slider -->
             <div class="new-arrival-swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <a href="#">
-                            <img src="resources/ring-1.jpg" alt="ring-1">
-                        </a>
-                        <div class="about-product">
-                            <a href="#same-link" class="product-title">
-                                This the best ring for your fiancee
+                        <div class="product">
+                            <a href="#">
+                                <img src="resources/ring-1.jpg" alt="ring-1">
                             </a>
-                            <div class="product-price">200$</div>
+                            <div class="about-product">
+                                <a href="#same-link" class="product-name">
+                                    Golden Ring
+                                </a>
+                                <div class="product-price">380$</div>
+                            </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <a href="#">
-                            <img src="resources/ring-2.jpg" alt="ring-2">
-                        </a>
-                        <div class="about-product">
-                            <a href="#same-link" class="product-title">
-                                This the best ring for your fiancee
+                        <div class="product">
+                            <a href="#">
+                                <img src="resources/ring-2.jpg" alt="ring-2">
                             </a>
-                            <div class="product-price">200$</div>
+                            <div class="about-product">
+                                <a href="#same-link" class="product-name">
+                                    Diamond gold ring
+                                </a>
+                                <div class="product-price">420$</div>
+                            </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <a href="#">
-                            <img src="resources/ring-3.jpg" alt="ring-3">
-                        </a>
-                        <div class="about-product">
-                            <a href="#same-link" class="product-title">
-                                This the best ring for your fiancee
+                        <div class="product">
+                            <a href="#">
+                                <img src="resources/ring-3.jpg" alt="ring-3">
                             </a>
-                            <div class="product-price">200$</div>
+                            <div class="about-product">
+                                <a href="#same-link" class="product-name">
+                                    Golden ring with silver padding
+                                </a>
+                                <div class="product-price">210$</div>
+                            </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <a href="#">
-                            <img src="resources/ring-4.jpg" alt="ring-4">
-                        </a>
-                        <div class="about-product">
-                            <a href="#same-link" class="product-title">
-                                This the best ring for your fiancee
+                        <div class="product">
+                            <a href="#">
+                                <img src="resources/ring-4.jpg" alt="ring-4">
                             </a>
-                            <div class="product-price">200$</div>
+                            <div class="about-product">
+                                <a href="#same-link" class="product-name">
+                                    blue diamond in silver
+                                </a>
+                                <div class="product-price">660$</div>
+                            </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <a href="#">
-                            <img src="resources/ring-5.jpg" alt="ring-5">
-                        </a>
-                        <div class="about-product">
-                            <a href="#same-link" class="product-title">
-                                This the best ring for your fiancee
+                        <div class="product">
+                            <a href="#">
+                                <img src="resources/ring-5.jpg" alt="ring-5">
                             </a>
-                            <div class="product-price">200$</div>
+                            <div class="about-product">
+                                <a href="#same-link" class="product-name">
+                                    red diamond in gold
+                                </a>
+                                <div class="product-price">450$</div>
+                            </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <a href="#">
-                            <img src="resources/ring-6.jpg" alt="ring-6">
-                        </a>
-                        <div class="about-product">
-                            <a href="#same-link" class="product-title">
-                                This the best ring for your fiancee
+                        <div class="product">
+                            <a href="#">
+                                <img src="resources/ring-6.jpg" alt="ring-6">
                             </a>
-                            <div class="product-price">200$</div>
+                            <div class="about-product">
+                                <a href="#same-link" class="product-name">
+                                    white diamond ring
+                                </a>
+                                <div class="product-price">340$</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -257,8 +285,10 @@
     </footer>
 
     <script defer src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
     <script defer src="slider.js"></script>
     <script defer src="script.js"></script>
+    <script defer src="search.js"></script>
 </body>
 
 </html>
