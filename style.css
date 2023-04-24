@@ -263,7 +263,7 @@ nav > ul > li:hover .pointing-arrow {
   transition: 1s ease;
   opacity: 0.8;
 }
-
+/* search bar starts */
 .search-bar-container {
   position: fixed;
   left: 0;
@@ -318,7 +318,7 @@ nav > ul > li:hover .pointing-arrow {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-/* Customize Algolia search input */
+/* search bar ends */
 
 /* Loader styling starts*/
 .wrapper {
