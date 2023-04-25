@@ -239,7 +239,7 @@ nav > ul > li:hover .pointing-arrow {
   z-index: 999;
   color: #fff;
   text-align: center;
-  overflow: auto;
+  overflow-y: scroll;
   background-color: #36454f;
   color: #e2cb99;
   height: 100vh;
@@ -248,7 +248,9 @@ nav > ul > li:hover .pointing-arrow {
 }
 
 #cart-section hr {
-  margin-top: 40px;
+  margin: 0 auto;
+  width: 90%;
+  border-color: #e2cb99;
 }
 #x-icon {
   width: 24px;
@@ -321,7 +323,7 @@ nav > ul > li:hover .pointing-arrow {
 /* search bar ends */
 
 /* Loader styling starts*/
-.wrapper {
+.loading {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -337,7 +339,7 @@ nav > ul > li:hover .pointing-arrow {
   height: 20px;
   border-radius: 50%;
   margin: 0 10px;
-  animation: 2s bounce ease infinite;
+  animation: 2s bounce ease-in-out infinite;
   background-color: #e2cb99;
 }
 
@@ -386,7 +388,7 @@ nav > ul > li:hover .pointing-arrow {
 }
 
 .New-Arrivals .new-arrival-swiper {
-  height: 300px;
+  height: auto;
   width: 100%;
   overflow: hidden;
 }
@@ -396,8 +398,10 @@ nav > ul > li:hover .pointing-arrow {
 .product {
   border-radius: 20px 20px 0px 0px;
   overflow: hidden;
-  position: relative;
+  position: relative;/*relative position for below image to scale*/
   height: 298px;
+  margin-bottom: 2px;
+  margin-top: 2px;
 }
 .product img {
   width: 100%;
@@ -455,7 +459,7 @@ nav > ul > li:hover .pointing-arrow {
   width: 20px;
 }
 
-hr {
+footer hr {
   width: 90%;
   margin: 0 auto;
   border-color: #e2cb99;
@@ -554,12 +558,6 @@ footer {
   #search-input::placeholder {
     font-size: 1.2rem;
   }
-  .New-Arrivals .new-arrival-swiper {
-    height: 150px;
-  }
-  .product {
-    height: 148px;
-  }
   .whatsapp img {
     width: 40px;
   }
@@ -575,7 +573,7 @@ footer {
 }
 
 /* styling for Mobiles */
-@media (max-width: 600px) {
+@media (max-width: 600px){
   :root {
     --swiper-navigation-size: 1.7rem !important;
   }
@@ -583,7 +581,6 @@ footer {
     display: flex;
     top: 20px;
   }
-
   header {
     height: 65px;
   }
@@ -596,7 +593,6 @@ footer {
   nav > ul > li:hover > ul {
     display: block;
   }
-
   .logo {
     position: relative;
     top: 3px;
@@ -614,12 +610,10 @@ footer {
     overflow: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   }
-
   nav ul {
     display: inline;
     gap: 0;
   }
-
   nav > ul > li {
     text-transform: uppercase;
     line-height: 50px;
@@ -648,11 +642,9 @@ footer {
   #search-input::placeholder {
     font-size: 1.2rem;
   }
-
   h1 {
     font-size: 1.5rem;
   }
-
   .icons-section {
     display: flex;
     justify-content: flex-end;
@@ -679,17 +671,17 @@ footer {
     top: 22px;
     right: 23px;
   }
-
   #cart-section h2 {
     margin-top: 7px;
   }
-
   #cart-section {
     width: 70%;
   }
-
   #cart-section hr {
     margin-top: 20px;
+  }
+  .product {
+    height: 238px;
   }
   .about-product {
     gap: 3px;
@@ -702,12 +694,6 @@ footer {
   }
   .whatsapp img {
     width: 40px;
-  }
-  .New-Arrivals .new-arrival-swiper {
-    height: 240px;
-  }
-  .product {
-    height: 238px;
   }
   .logo img {
     width: 110px;

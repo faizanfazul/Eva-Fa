@@ -15,12 +15,15 @@ const SearchResult = document.getElementById("search-results"); // search input.
 
 window.addEventListener("load", (e) => {
   setTimeout(() => {
-    document.querySelector(".wrapper").style.display = "none";
+    document.querySelector(".loading").style.display = "none";
     body.style.overflow = "visible";
   }, 1000);
 });
 // Event listener for the hamburger
 hamburger.addEventListener("click", () => {
+  if (searchContainer.style.display == "block") {
+    closeSearch();
+  }
   lines.forEach((line) => line.classList.toggle("active"));
   if (nav.style.display == "block") {
     nav.style.display = "none";
@@ -36,14 +39,12 @@ hamburger.addEventListener("click", () => {
     cartSection.style.display = "none";
     body.style.overflow = "hidden";
   }
-  if (searchContainer.style.display == "block") {
-    searchContainer.style.display = "none";
-    body.style.overflow = "visible";
-  }
 });
 // Event listener for the cart icon
 cart.addEventListener("click", (e) => {
-  e.preventDefault();
+  if (searchContainer.style.display == "block") {
+    closeSearch();
+  }
   if (nav.style.display == "block") {
     nav.style.display = "none";
     lines.forEach((line) => line.classList.toggle("active"));
@@ -54,7 +55,6 @@ cart.addEventListener("click", (e) => {
   body.style.overflow = "hidden";
 });
 xIcon.addEventListener("click", (e) => {
-  e.preventDefault();
   cartSection.style.display = "none";
   pageContainer.style.display = "none";
   body.focus();
@@ -82,7 +82,6 @@ function closeSearch() {
   SearchResult.innerHTML = "";
 }
 searchButton.addEventListener("click", (e) => {
-  e.preventDefault();
   if (nav.style.display == "block") {
     nav.style.display = "none";
     lines.forEach((line) => line.classList.toggle("active"));
