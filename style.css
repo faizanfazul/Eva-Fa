@@ -214,7 +214,7 @@ nav > ul > li:hover .pointing-arrow {
   display: inline-block;
 }
 
-.cart-count {
+#cart-count {
   color: #000;
   position: absolute;
   top: -8px;
@@ -225,6 +225,7 @@ nav > ul > li:hover .pointing-arrow {
   background-color: #fff;
   font-weight: bold;
 }
+/* Style the tooltip text */
 
 #cart-section h2 {
   margin-top: 16px;
@@ -247,8 +248,12 @@ nav > ul > li:hover .pointing-arrow {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-#cart-section hr {
+hr {
   margin: 0 auto;
+}
+
+#cart-section hr {
+  margin-top: 20px;
   width: 90%;
   border-color: #e2cb99;
 }
@@ -393,12 +398,26 @@ nav > ul > li:hover .pointing-arrow {
   overflow: hidden;
 }
 /* slider style ends */
+h1 {
+  text-align: center;
+  animation: blink 1s infinite;
+  text-transform: uppercase;
+  color: #e2cb99;
+}
 
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 10;
+  }
+}
 /* product card styling starts */
 .product {
   border-radius: 20px 20px 0px 0px;
   overflow: hidden;
-  position: relative;/*relative position for below image to scale*/
+  position: relative; /*relative position for below image to scale*/
   height: 298px;
   margin-bottom: 2px;
   margin-top: 2px;
@@ -442,6 +461,11 @@ nav > ul > li:hover .pointing-arrow {
   font-size: 1rem;
 }
 /* product card styling ends */
+/* footer starts */
+footer {
+  background-color: #36454f;
+  padding: 20px 0px 20px 0px;
+}
 
 .follow {
   text-align: center;
@@ -455,7 +479,7 @@ nav > ul > li:hover .pointing-arrow {
 }
 
 .follow img:hover {
-  opacity: 0.8;
+  opacity: 0.5;
   width: 20px;
 }
 
@@ -463,22 +487,6 @@ footer hr {
   width: 90%;
   margin: 0 auto;
   border-color: #e2cb99;
-}
-
-h1 {
-  text-align: center;
-  animation: blink 1s infinite;
-  text-transform: uppercase;
-  color: #e2cb99;
-}
-
-@keyframes blink {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 10;
-  }
 }
 
 .whatsapp {
@@ -496,11 +504,6 @@ h1 {
 }
 .whatsapp img:hover {
   opacity: 0.8;
-}
-
-footer {
-  background-color: #36454f;
-  padding: 20px 0px 20px 0px;
 }
 
 .footer-links {
@@ -573,7 +576,7 @@ footer {
 }
 
 /* styling for Mobiles */
-@media (max-width: 600px){
+@media (max-width: 600px) {
   :root {
     --swiper-navigation-size: 1.7rem !important;
   }
@@ -677,9 +680,6 @@ footer {
   #cart-section {
     width: 70%;
   }
-  #cart-section hr {
-    margin-top: 20px;
-  }
   .product {
     height: 238px;
   }
@@ -726,11 +726,6 @@ footer {
   #cart-section {
     width: 40%;
   }
-
-  #cart-section hr {
-    margin-top: 50px;
-  }
-
   #x-icon {
     width: 24px;
     cursor: pointer;

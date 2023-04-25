@@ -34,7 +34,7 @@
             <span class="line"></span>
         </button>
 
-        <div class="currency">
+        <div class="currency" title="change currency">
             <select>
                 <option>&#1583; AED</option>
                 <option>&#36; USD</option>
@@ -50,18 +50,19 @@
         <!-- icons in the header -->
         <div class="icons-section">
             <a href="#">
-                <img src="resources/search.png" alt="Search icon" class="icons" id="search-icon">
+                <img src="resources/search.png" alt="Search icon" class="icons" id="search-icon"
+                    title="search products">
             </a>
             <a href="#">
-                <img src="resources/wishlist.png" alt="Heart icon" class="icons">
+                <img src="resources/wishlist.png" alt="Heart icon" class="icons" title="see your wishlist">
             </a>
             <a href="#">
-                <img src="resources/profile.png" alt="profile icon" class="icons">
+                <img src="resources/profile.png" alt="profile icon" class="icons" title="your profile">
             </a>
             <div class="cart-icon" id="cart">
                 <a href="#">
-                    <img src="resources/cart.png" alt="cart icon" class="icons">
-                    <span class="cart-count" id="cart-item">0</span>
+                    <img src="resources/cart.png" alt="cart icon" class="icons" title="your cart">
+                    <span id="cart-count">0</span>
                 </a>
             </div>
         </div>
@@ -108,7 +109,7 @@
             <form class="search-form" action="">
                 <img src="resources/search.png" alt="Search icon">
                 <img src="resources/X.png" alt="X icon" onclick="closeSearch()">
-                <input type="search" id="search-input" placeholder="Search...">
+                <input type="text" id="search-input" placeholder="Search...">
             </form>
             <div id="search-results">
 

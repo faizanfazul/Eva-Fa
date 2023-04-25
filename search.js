@@ -20,7 +20,6 @@ searchInput.addEventListener("input", (event) => {
 });
 function renderSearchResults(results) {
   searchResults.innerHTML = "";
-
   results.forEach((result) => {
     const resultHtml = `
                 <style>
