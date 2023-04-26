@@ -2,14 +2,17 @@
 // for main slider
 var swiper = new Swiper(".main-swiper", {
   spaceBetween: 10,
-  loop: true,
-  centeredSlides: true,
-  effect: "coverflow",
+  loop: false,
+  effect: "creative",
   lazy: true,
-  lazy: {
-    loadOnTransitionStart: true,
-    loadPrevNext: true,
-    checkInView: true,
+  creativeEffect: {
+    perspective: true,
+    prev: {
+      translate: [0, 0, -400],
+    },
+    next: {
+      translate: ["100%", 0, 0],
+    },
   },
   autoplay: {
     delay: 3000,
@@ -27,6 +30,7 @@ var swiper = new Swiper(".main-swiper", {
 // for New arrival products slider
 var swiper = new Swiper(".new-arrival-swiper", {
   spaceBetween: 10,
+  lazy: true,
   breakpoints: {
     295: {
       slidesPerView: 2,
@@ -48,5 +52,23 @@ var swiper = new Swiper(".new-arrival-swiper", {
       slidesPerView: 6,
       spaceBetween: 10,
     },
+  },
+});
+// swiper for showcasing product in
+var swiper = new Swiper(".product-images", {
+  loop: false,
+  lazy: true,
+  spaceBetween: 10,
+  slidesPerView: 3,
+  freeMode: true,
+  watchSlidesProgress: true,
+});
+var swiper2 = new Swiper(".product-slideShow", {
+  loop: true,
+  spaceBetween: 10,
+  lazy: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
 });

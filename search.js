@@ -49,6 +49,4 @@ function renderSearchResults(results) {
     searchResults.insertAdjacentHTML("beforeend", resultHtml);
   });
 }
-function clearSearchResults() {
-  searchResults.innerHTML = "";
-}
+
