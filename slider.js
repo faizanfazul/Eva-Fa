@@ -4,7 +4,6 @@ var swiper = new Swiper(".main-swiper", {
   spaceBetween: 10,
   loop: false,
   effect: "creative",
-  lazy: true,
   creativeEffect: {
     perspective: true,
     prev: {
@@ -30,7 +29,6 @@ var swiper = new Swiper(".main-swiper", {
 // for New arrival products slider
 var swiper = new Swiper(".new-arrival-swiper", {
   spaceBetween: 10,
-  lazy: true,
   breakpoints: {
     295: {
       slidesPerView: 2,
@@ -65,10 +63,27 @@ var swiper = new Swiper(".product-images", {
 });
 var swiper2 = new Swiper(".product-slideShow", {
   loop: true,
-  spaceBetween: 10,
   lazy: true,
+  spaceBetween: 10,
+  zoomContainerClass: "swiper-zoom-container",
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  thumbs: {
+    swiper: swiper,
+  },
+  zoom: {
+    maxRatio: 2,
+    minRatio: 0,
+    toggle: true,
+  },
+});
+swiper2.on("zoomChange", function () {
+  var isZoomed = swiper2.zoom.scale > 1;
+  var cursor = isZoomed ? "zoom-out" : "zoom-in";
+  swiper2.wrapperEl.style.cursor = cursor;
+});
+swiper2.wrapperEl.addEventListener("mouseenter", function () {
+  swiper2.wrapperEl.style.cursor = "zoom-in";
 });
