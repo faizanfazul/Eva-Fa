@@ -53,7 +53,7 @@ var swiper = new Swiper(".new-arrival-swiper", {
   },
 });
 // swiper for showcasing product in
-var swiper = new Swiper(".product-images", {
+var swiper = new Swiper(".select-images", {
   loop: false,
   lazy: true,
   spaceBetween: 10,
@@ -78,12 +78,4 @@ var swiper2 = new Swiper(".product-slideShow", {
     minRatio: 0,
     toggle: true,
   },
-});
-swiper2.on("zoomChange", function () {
-  var isZoomed = swiper2.zoom.scale > 1;
-  var cursor = isZoomed ? "zoom-out" : "zoom-in";
-  swiper2.wrapperEl.style.cursor = cursor;
-});
-swiper2.wrapperEl.addEventListener("mouseenter", function () {
-  swiper2.wrapperEl.style.cursor = "zoom-in";
 });

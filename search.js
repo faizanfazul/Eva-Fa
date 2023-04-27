@@ -6,6 +6,10 @@ const searchResults = document.querySelector("#search-results");
 
 searchInput.addEventListener("input", (event) => {
   const query = event.target.value;
+  if (query.length === 0) {
+    searchResults.style.display = "none";
+    return;
+  }
   if (query.length >= 2) {
     index.search(query, (err, { hits } = {}) => {
       if (err) {
@@ -13,11 +17,18 @@ searchInput.addEventListener("input", (event) => {
         return;
       }
       renderSearchResults(hits);
+      searchResults.style.display = "flex";
     });
-  } else {
-    clearSearchResults();
   }
 });
+function checkTitle() {
+  let documentTitle = document.querySelector("title");
+  if (documentTitle.textContent == "Eva Fa") {
+    return "";
+  } else {
+    return "../";
+  }
+}
 function renderSearchResults(results) {
   searchResults.innerHTML = "";
   results.forEach((result) => {
@@ -37,7 +48,7 @@ function renderSearchResults(results) {
                     </style>
           <div class="product">
                 <a href="#">
-                    <img src="${result.product_image}" alt="${result.product_alt}">
+                  <img src="${checkTitle() + result.product_image}" alt="${result.product_alt}">
                 </a>
                 <div class="about-product">
                     <a href="#same-link" class="product-name">
@@ -49,4 +60,3 @@ function renderSearchResults(results) {
     searchResults.insertAdjacentHTML("beforeend", resultHtml);
   });
 }
-

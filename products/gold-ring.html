@@ -12,45 +12,215 @@
 </head>
 
 <body>
+    <header>
+        <div class="loading">
+            <div class="one ball"></div>
+            <div class="two ball"></div>
+            <div class="three ball"></div>
+            <div class="four ball"></div>
+        </div>
+        <div id="cart-section">
+            <h2>CART <img src="../resources/cart.png" alt="cart icon" width="26"></h2>
+            <img src="../resources/X.png" alt="x icon" id="x-icon">
+            <hr>
+            <p>Your Cart is Empty</p>
+        </div>
+        <button class="hamburger" id="hamburg">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
 
-    <div class="product-slideShow">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div class="swiper-zoom-container">
-                    <img src="../resources/ring-1.jpg" loading="lazy" />
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="swiper-zoom-container">
-                    <img src="../resources/ring-2.jpg" loading="lazy" />
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="swiper-zoom-container">
-                    <img src="../resources/ring-3.jpg" loading="lazy" />
-                </div>
+        <div class="currency" title="change currency">
+            <select>
+                <option>&#1583; AED</option>
+                <option>&#36; USD</option>
+                <option>&#8360; PKR</option>
+            </select>
+        </div>
+        <div class="logo">
+            <a href="index.html">
+                <img src="../resources/logo.png" alt="Eva Fa logo">
+            </a>
+        </div>
+        <div class="icons-section">
+            <a href="#">
+                <img src="../resources/search.png" alt="Search icon" class="icons" id="search-icon"
+                    title="search products">
+            </a>
+            <a href="#">
+                <img src="../resources/wishlist.png" alt="Heart icon" class="icons" title="see your wishlist">
+            </a>
+            <a href="#">
+                <img src="../resources/profile.png" alt="profile icon" class="icons" title="your profile">
+            </a>
+            <div class="cart-icon" id="cart">
+                <a href="#">
+                    <img src="../resources/cart.png" alt="cart icon" class="icons" title="your cart">
+                    <span id="cart-count">0</span>
+                </a>
             </div>
         </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-    </div>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#">Shop<span class="pointing-arrow"> &#10095;</span></a>
+                    <ul>
+                        <li><a href="#">bracelets</a></li>
+                        <li><a href="#">Rings</a></li>
+                        <li><a href="#">Earrings</a></li>
+                        <li><a href="#">neckless</a></li>
+                    </ul>
+                </li>
 
-    <div class="product-images">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="../resources/ring-1.jpg" loading="lazy" />
-            </div>
-            <div class="swiper-slide">
-                <img src="../resources/ring-2.jpg" loading="lazy" />
-            </div>
-            <div class="swiper-slide">
-                <img src="../resources/ring-3.jpg" loading="lazy" />
+                <li><a href="#">Gifting Ideas<span class="pointing-arrow"> &#10095;</span></a>
+                    <ul>
+                        <li><a href="#">Gift for her</a></li>
+                        <li><a href="#">Gift for him</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#">Accessories<span class="pointing-arrow"> &#10095;</span></a>
+                    <ul>
+                        <li><a href="#">Boxes</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#">Watches<span class="pointing-arrow"> &#10095;</span></a>
+                    <ul>
+                        <li><a href="#">men</a></li>
+                        <li><a href="#">woman</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#">About us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="page-container"></div>
+
+    <main>
+        <!-- Search Bar -->
+        <div class="search-bar-container" id="search-container">
+            <form class="search-form" action="">
+                <img src="../resources/search.png" alt="Search icon">
+                <img src="../resources/X.png" alt="X icon" onclick="closeSearch()">
+                <input type="text" id="search-input" placeholder="Search...">
+            </form>
+            <div id="search-results">
+
             </div>
         </div>
-    </div>
+        <!-- Search Bar Ends -->
+        <article>
+            <section class="product-images-section">
+                <div class="product-slideShow">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="../resources/ring-1.jpg" loading="lazy" />
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="../resources/ring-2.jpg" loading="lazy" />
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="../resources/ring-3.jpg" loading="lazy" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+
+                <!-- select images -->
+                <div class="select-images">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="../resources/ring-1.jpg" loading="lazy" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../resources/ring-2.jpg" loading="lazy" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../resources/ring-3.jpg" loading="lazy" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="product-details-section">
+                <h1>Gold Ring</h1>
+            </section>
+        </article>
+
+    </main>
+
+    <footer>
+        <div class="follow">
+            Follow us<br>
+            <a href="#">
+                <img src="../resources/facebook.png" alt="facebook icon">
+            </a>
+            <a href="#">
+                <img src="../resources/instagram.png" alt="instagram icon">
+            </a>
+        </div>
+
+        <hr>
+        <br>
+
+        <div class="footer-links">
+            <div class="help">
+                <div>Help</div><br>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Free Life Time Warranty</a></li>
+                    <li><a href="#">Free Secure Shipping</a></li>
+                    <li><a href="#">Why Eva Gems ?</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Delivery / Shipment Policy</a></li>
+                    <li><a href="#">Refund & Cancellation Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Refund policy</a></li>
+                </ul>
+            </div>
+            <div class="contact">
+                <div>Contact</div><br>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Free Life Time Warranty</a></li>
+                    <li><a href="#">Free Secure Shipping</a></li>
+                    <li><a href="#">Why Eva Gems ?</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Delivery / Shipment Policy</a></li>
+                </ul>
+            </div>
+            <div class="main menu">
+                <div>Main Menu</div><br>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Free Life Time Warranty</a></li>
+                    <li><a href="#">Free Secure Shipping</a></li>
+                    <li><a href="#">Why Eva Gems ?</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <a href="index.html">&copy; Eva Fa</a>
+        </div>
+    </footer>
 
     <script defer src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
     <script defer src="../slider.js"></script>
+    <script defer src="../script.js"></script>
+    <script defer src="../search.js"></script>
 </body>
 
 </html>
