@@ -74,7 +74,7 @@ var swiper2 = new Swiper(".product-slideShow", {
     swiper: swiper,
   },
   zoom: {
-    maxRatio: 10,
+    maxRatio: 5,
     minRatio: 1,
     toggle: true,
   },
