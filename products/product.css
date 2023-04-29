@@ -73,7 +73,6 @@ article {
 .product-details-section {
   width: 40%;
   position: relative;
-  opacity: 0.8;
 }
 .product-details-section h2 a {
   color: #000;
@@ -91,6 +90,7 @@ article {
 }
 .product-details-section h1 {
   font-size: 1.6rem;
+  opacity: 0.9;
 }
 .product-details-section .sterling-gold {
   font-weight: 900;
@@ -99,11 +99,13 @@ article {
 #current-product-price {
   margin-top: 8px;
   letter-spacing: 3px;
-  opacity: 0.9;
+  opacity: 0.8;
 }
-
 .details-description {
   margin-top: 10px;
+}
+.details-description h4{
+  opacity: 0.8;
 }
 .details-description p {
   margin-top: 10px;
