@@ -12,7 +12,6 @@
   margin: 0;
   padding: 0;
   outline: none;
-  list-style: none;
   font-family: "Open Sans", sans-serif;
   text-decoration: none;
 }
@@ -25,7 +24,7 @@ article {
   margin: 40px 0px 10px 0px;
   display: flex;
   flex-direction: row;
-  gap: 15px;
+  gap: 30px;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -72,7 +71,6 @@ article {
 }
 /* swiper ends */
 .product-details-section {
-  /* border: 1px solid red; */
   width: 40%;
   position: relative;
   opacity: 0.8;
@@ -101,7 +99,41 @@ article {
 #current-product-price {
   margin-top: 8px;
   letter-spacing: 3px;
+  opacity: 0.9;
 }
+
+.details-description {
+  margin-top: 10px;
+}
+.details-description p {
+  margin-top: 10px;
+  line-height: 23px;
+}
+.details-description ul {
+  margin-left: 50px;
+}
+.details-description li {
+  margin: 10px 0;
+}
+#add-to-cart {
+  text-transform: uppercase;
+  width: 100%;
+  padding: 10px;
+  background-color: #36454f;
+  color: #fff;
+  font-size: 1rem;
+  border: 1px solid #36454f;
+  margin: 0 auto;
+  cursor: pointer;
+  font-weight: 900;
+  display: block;
+}
+#add-to-cart:hover {
+  background-color: transparent;
+  color: #000;
+  transition: all 0.3s ease-in;
+}
+
 header {
   background-color: #36454f;
   position: sticky;
@@ -169,6 +201,7 @@ nav {
 nav > ul {
   display: flex;
   column-gap: 100px;
+  list-style: none;
 }
 
 nav > ul > li {
@@ -183,7 +216,7 @@ nav li a {
   color: #e2cb99;
 }
 
-nav li a:hover {
+nav li a.active {
   color: #fff;
   transition: all 0.5s ease-in-out;
 }
@@ -219,7 +252,7 @@ nav > ul > li > ul > li:hover {
   margin-left: 5px;
 }
 
-nav > ul > li:hover .pointing-arrow {
+nav > ul > li .pointing-arrow.active {
   transition: transform 0.3s ease-in-out;
   transform: rotate(90deg);
 }
@@ -661,6 +694,9 @@ footer hr {
     line-height: 50px;
     border-bottom: 1px solid #e2cb99;
   }
+  nav > ul > li > ul > li {
+    font-size: 1rem;
+  }
   .search-bar-container {
     top: 70px;
   }
@@ -712,6 +748,9 @@ footer hr {
   }
   #cart-section {
     width: 70%;
+  }
+  .details-description ul {
+    margin-left: 20px;
   }
   article {
     margin: 10px 20px 10px 20px;
