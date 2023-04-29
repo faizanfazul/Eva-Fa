@@ -27,9 +27,6 @@ article {
 
 .product-images-section {
   width: 50%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
 }
 /* images swiper styling */
 .product-slideShow {
@@ -46,7 +43,7 @@ article {
   border-radius: 10px;
 }
 .select-images .swiper-slide {
-  opacity: 0.6;
+  opacity: 0.4;
   height: 200px;
   overflow: hidden !important;
   cursor: pointer;
@@ -56,6 +53,7 @@ article {
 }
 .select-images .swiper-wrapper {
   display: flex;
+  margin-top: 10px;
   flex-direction: row;
   gap: 6px;
 }
