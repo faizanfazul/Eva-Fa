@@ -102,7 +102,7 @@ nav li a {
   color: #e2cb99;
 }
 
-nav li a:hover {
+nav li a.active {
   color: #fff;
   transition: all 0.5s ease-in-out;
 }
@@ -129,7 +129,7 @@ nav > ul > li > ul > li {
 }
 nav > ul > li > ul > li:hover {
   transform: translateX(4px);
-  transition: transform 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .pointing-arrow {
@@ -138,7 +138,7 @@ nav > ul > li > ul > li:hover {
   margin-left: 5px;
 }
 
-nav > ul > li:hover .pointing-arrow {
+nav > ul > li .pointing-arrow.active {
   transition: transform 0.3s ease-in-out;
   transform: rotate(90deg);
 }
@@ -595,6 +595,9 @@ footer hr {
   nav > ul > li:hover > ul {
     display: block;
   }
+  nav > ul > li > ul > li{
+    font-size: 1rem;
+  }
   .logo {
     position: relative;
     top: 3px;
@@ -620,6 +623,7 @@ footer hr {
     text-transform: uppercase;
     line-height: 50px;
     border-bottom: 1px solid #e2cb99;
+    font-size: 1rem;
   }
   .search-bar-container {
     top: 70px;

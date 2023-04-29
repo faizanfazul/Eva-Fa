@@ -12,12 +12,11 @@ const searchContainer = document.getElementById("search-container"); // search c
 const searchButton = document.getElementById("search-icon"); // search container.
 const SeInput = document.getElementById("search-input"); // search input.
 const SearchResult = document.getElementById("search-results"); // search input.
+const menuItems = document.querySelectorAll("nav li a"); // menu stuff in navbar
 
 window.addEventListener("load", (e) => {
-  setTimeout(() => {
-    document.querySelector(".loading").style.display = "none";
-    body.style.overflow = "visible";
-  }, 1000);
+  document.querySelector(".loading").style.display = "none";
+  body.style.overflow = "visible";
 });
 // Event listener for the hamburger
 hamburger.addEventListener("click", () => {
@@ -90,4 +89,22 @@ searchButton.addEventListener("click", (e) => {
   SeInput.focus();
   pageContainer.style.display = "block";
   body.style.overflow = "hidden";
+});
+menuItems.forEach((item) => {
+  item.addEventListener("click", (event) => {
+    event.preventDefault();
+    const clickedItem = event.currentTarget.parentNode;
+    const clickedItemSubMenu = clickedItem.querySelector("ul");
+    const clickedItemArrow = clickedItem.querySelector(".pointing-arrow");
+    const clickedItemColor = clickedItem.querySelector("ul li a");
+    if (clickedItemSubMenu) {
+      if (clickedItemSubMenu.style.display === "block") {
+        clickedItemSubMenu.style.display = "none";
+      } else {
+        clickedItemSubMenu.style.display = "block";
+      }
+      clickedItemArrow.classList.toggle("active");
+      clickedItemColor.classList.toggle("active");
+    }
+  });
 });
