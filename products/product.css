@@ -83,6 +83,15 @@ article {
   top: 0;
   left: 0;
 }
+.product-details-section img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+.product-details-section img:hover {
+  background-color: #000;
+}
 .more-of-product {
   text-transform: uppercase;
   margin-top: 30px;
@@ -104,7 +113,7 @@ article {
 .details-description {
   margin-top: 10px;
 }
-.details-description h4{
+.details-description h4 {
   opacity: 0.8;
 }
 .details-description p {
@@ -218,7 +227,7 @@ nav li a {
   color: #e2cb99;
 }
 
-nav li a.active {
+nav li a:hover {
   color: #fff;
   transition: all 0.5s ease-in-out;
 }
@@ -232,6 +241,7 @@ nav > ul > li > ul {
   padding: 0px 10px 0px 10px;
   min-width: 100%;
   border-radius: 2px;
+  list-style: none;
 }
 
 nav > ul > li:hover > ul {
@@ -253,11 +263,11 @@ nav > ul > li > ul > li:hover {
   font-size: 0.8rem;
   margin-left: 5px;
 }
-
-nav > ul > li .pointing-arrow.active {
+nav > ul > li:hover .pointing-arrow {
   transition: transform 0.3s ease-in-out;
   transform: rotate(90deg);
 }
+
 .icons {
   width: 26px;
 }

@@ -12,7 +12,6 @@ const searchContainer = document.getElementById("search-container"); // search c
 const searchButton = document.getElementById("search-icon"); // search container.
 const SeInput = document.getElementById("search-input"); // search input.
 const SearchResult = document.getElementById("search-results"); // search input.
-const menuItems = document.querySelectorAll("nav li a"); // menu stuff in navbar
 
 window.addEventListener("load", (e) => {
   document.querySelector(".loading").style.display = "none";
@@ -90,6 +89,10 @@ searchButton.addEventListener("click", (e) => {
   pageContainer.style.display = "block";
   body.style.overflow = "hidden";
 });
+
+const menuItems = document.querySelectorAll("nav li a"); // menu stuff in navbar
+const isTouchDevice = "ontouchstart" in window; // check if the device is touch device
+
 menuItems.forEach((item) => {
   item.addEventListener("click", (event) => {
     event.preventDefault();
@@ -97,14 +100,18 @@ menuItems.forEach((item) => {
     const clickedItemSubMenu = clickedItem.querySelector("ul");
     const clickedItemArrow = clickedItem.querySelector(".pointing-arrow");
     const clickedItemColor = clickedItem.querySelector("ul li a");
-    if (clickedItemSubMenu) {
-      if (clickedItemSubMenu.style.display === "block") {
-        clickedItemSubMenu.style.display = "none";
-      } else {
-        clickedItemSubMenu.style.display = "block";
+    if (isTouchDevice) {
+      if (clickedItemSubMenu) {
+        if (clickedItemSubMenu.style.display === "block") {
+          clickedItemSubMenu.style.display = "none";
+          clickedItemArrow.style.transform = "rotate(0deg)";
+          clickedItemColor.style.color = "#e2cb99";
+        } else {
+          clickedItemSubMenu.style.display = "block";
+          clickedItemArrow.style.transform = "rotate(90deg)";
+          clickedItemColor.style.color = "#fff";
+        }
       }
-      clickedItemArrow.classList.toggle("active");
-      clickedItemColor.classList.toggle("active");
     }
   });
 });
