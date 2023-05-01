@@ -115,15 +115,18 @@ menuItems.forEach((item) => {
     }
   });
 });
-const addToWishButton = document.getElementById("add-to-wish");
-const heart = document.getElementById("filled-heart");
+const addToWishButton = document.querySelectorAll(".add-to-wish");
+const wishItems = document.getElementById("wishItems");
 
-addToWishButton.addEventListener("click", (e) => {
-  e.preventDefault();
-  if (heart.style.display === "none") {
-    heart.style.display = "inline";
-    // here the wish clone product logic
-  } else {
-    heart.style.display = "none";
-  }
+addToWishButton.forEach((clickedHeart) => {
+  clickedHeart.addEventListener("click", (e) => {
+    const clickedButton = e.currentTarget;
+    const correspondingHeartIcon = clickedButton.lastElementChild;
+    // const wishClickedItem = clickedButton.parentNode;
+    if (correspondingHeartIcon.style.display === "none") {
+      correspondingHeartIcon.style.display = "inline";
+    } else {
+      correspondingHeartIcon.style.display = "none";
+    }
+  });
 });

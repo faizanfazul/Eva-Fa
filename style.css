@@ -48,7 +48,7 @@ h1 {
   align-items: center;
   position: absolute;
   top: 30px;
-  left: 87%;
+  right: 20px;
   column-gap: 10px;
 }
 
@@ -83,6 +83,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 nav > ul {
@@ -397,7 +398,7 @@ hr {
   overflow: hidden;
 }
 /* slider style ends */
-h1 {
+.New-Arrivals h1 {
   text-align: center;
   animation: blink 1s infinite;
   text-transform: uppercase;
@@ -412,20 +413,36 @@ h1 {
     opacity: 10;
   }
 }
-#add-to-wish {
+.add-to-wish {
   position: absolute;
   top: 5px;
   right: 30px;
   cursor: pointer;
+  z-index: 989;
 }
-#add-to-wish img {
+.add-to-wish img {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 990;
 }
-#add-to-wish img:nth-child(2) {
+.add-to-wish img:nth-child(2) {
   display: none;
+}
+.wishItemsSection {
+  color: #000;
+  margin: 30px 50px 10px 50px;
+  position: relative;
+}
+.wishItemsSection button {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #e2cb99;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
 }
 /* product card styling starts */
 .product {
@@ -670,9 +687,9 @@ footer hr {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    position: relative;
-    top: -43px;
-    left: -20px;
+    position: absolute;
+    top: 23px;
+    right: 20px;
     column-gap: 0px;
   }
   .currency {
@@ -731,7 +748,7 @@ footer hr {
   .icons-section {
     position: absolute;
     top: 30px;
-    left: 80%;
+    right: 20px;
     column-gap: 10px;
   }
   nav ul {

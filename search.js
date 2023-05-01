@@ -23,7 +23,10 @@ searchInput.addEventListener("input", (event) => {
 });
 function checkTitle() {
   let documentTitle = document.querySelector("title");
-  if (documentTitle.textContent == "Eva Fa") {
+  if (
+    documentTitle.textContent == "Eva Fa" ||
+    documentTitle.textContent == "Wish list"
+  ) {
     return "";
   } else {
     return "../";
