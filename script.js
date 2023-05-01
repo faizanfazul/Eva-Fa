@@ -115,3 +115,15 @@ menuItems.forEach((item) => {
     }
   });
 });
+const addToWishButton = document.getElementById("add-to-wish");
+const heart = document.getElementById("filled-heart");
+
+addToWishButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (heart.style.display === "none") {
+    heart.style.display = "inline";
+    // here the wish clone product logic
+  } else {
+    heart.style.display = "none";
+  }
+});

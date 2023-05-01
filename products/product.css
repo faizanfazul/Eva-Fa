@@ -83,14 +83,20 @@ article {
   top: 0;
   left: 0;
 }
-.product-details-section img {
+#add-to-wish {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 25px;
   cursor: pointer;
 }
-.product-details-section img:hover {
-  background-color: #000;
+#add-to-wish img {
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+}
+#add-to-wish img:nth-child(2) {
+  display: none;
 }
 .more-of-product {
   text-transform: uppercase;
