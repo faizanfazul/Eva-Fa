@@ -12,10 +12,13 @@ const searchContainer = document.getElementById("search-container"); // search c
 const searchButton = document.getElementById("search-icon"); // search container.
 const SeInput = document.getElementById("search-input"); // search input.
 const SearchResult = document.getElementById("search-results"); // search input.
+const closeDialogBox = document.getElementById("closeDialogBox"); // search input.
+const dialogBox = document.getElementById("dialogBox"); // search input.
+const acceptDialog = document.getElementById("accept-Dialog"); // search input.
 
 window.addEventListener("load", (e) => {
   document.querySelector(".loading").style.display = "none";
-  body.style.overflow = "visible";
+  body.style.overflow = "auto";
 });
 // Event listener for the hamburger
 hamburger.addEventListener("click", () => {
@@ -115,18 +118,59 @@ menuItems.forEach((item) => {
     }
   });
 });
+
 const addToWishButton = document.querySelectorAll(".add-to-wish");
-const wishItems = document.getElementById("wishItems");
 
 addToWishButton.forEach((clickedHeart) => {
   clickedHeart.addEventListener("click", (e) => {
     const clickedButton = e.currentTarget;
     const correspondingHeartIcon = clickedButton.lastElementChild;
-    // const wishClickedItem = clickedButton.parentNode;
+    const WishedProduct = clickedHeart.parentNode.cloneNode(true); // cloned product
+
     if (correspondingHeartIcon.style.display === "none") {
       correspondingHeartIcon.style.display = "inline";
+      // clone logic
+      // also add remove item
     } else {
       correspondingHeartIcon.style.display = "none";
+      // wishItems.removeChild(wishClickedItem);
     }
   });
+});
+
+// get user IP
+function getIpAddress() {
+  return fetch("https://api.ipify.org/?format=json")
+    .then((response) => response.json())
+    .then((data) => data.ip)
+    .catch((error) => console.error(error));
+}
+// get user ip details
+async function getIpDetails() {
+  try {
+    const ipAddress = await getIpAddress();
+    const response = await fetch(`https://ipapi.co/${ipAddress}/json/`);
+    const user = await response.json();
+    dialogBox.showModal();
+    const userCountry = user.country_name;
+    document.getElementById(
+      "user-info"
+    ).innerHTML = `<h1>Your Current Location is in ${userCountry}</h1>
+    <h3>Enable pricing and shipping policies to ${userCountry}</h3><br>`;
+    body.style.overflow = "hidden";
+  } catch (error) {
+    console.log(error);
+  }
+}
+getIpDetails();
+
+closeDialogBox.addEventListener("click", (e) => {
+  dialogBox.close();
+  body.style.overflow = "auto";
+});
+
+acceptDialog.addEventListener("click", (e) => {
+  dialogBox.close();
+  body.style.overflow = "auto";
+  // add logic of setting price or other things when user click this.
 });

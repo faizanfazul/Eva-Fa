@@ -29,6 +29,10 @@ var swiper = new Swiper(".main-swiper", {
 // for New arrival products slider
 var swiper = new Swiper(".new-arrival-swiper", {
   spaceBetween: 10,
+  // autoplay: {
+  //   delay: 2000,
+  //   disableOnInteraction: false,
+  // },
   breakpoints: {
     295: {
       slidesPerView: 2,

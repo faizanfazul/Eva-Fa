@@ -591,7 +591,9 @@ footer hr {
   justify-content: center;
   gap: 100px;
 }
-
+.footer-links div ul{
+  list-style: none;
+}
 .footer-links div ul li a {
   color: #fff;
   line-height: 25px;
