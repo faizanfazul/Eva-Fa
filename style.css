@@ -330,16 +330,18 @@ hr {
 /* dialog box styling */
 #dialogBox::backdrop {
   background-color: rgba(0, 0, 0, 0.6);
+  /* filter: blur(3px); */
 }
 #dialogBox {
-  padding: 20px;
-  width: 60%;
+  padding: 40px;
+  width: 70%;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border: none;
-  border-radius: 10px;
+  z-index: 990;
+  background: transparent;
 }
 #closeDialogBox {
   position: absolute;
@@ -354,6 +356,9 @@ hr {
   color: #000;
   margin-top: 10px;
   text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
 }
 #accept-Dialog {
   background-color: #000;
@@ -374,7 +379,7 @@ hr {
   color: #000;
   transition: all 0.3s ease-in;
 }
-button:focus {
+#dialogBox button:focus {
   outline: 0.5px dashed #000;
 }
 /* Loader styling starts*/
@@ -661,9 +666,6 @@ footer hr {
 @media (max-width: 600px) {
   :root {
     --swiper-navigation-size: 1.7rem !important;
-  }
-  #user-info {
-    text-align: left;
   }
   .hamburger {
     display: flex;

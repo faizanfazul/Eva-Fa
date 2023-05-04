@@ -14,7 +14,6 @@ const SeInput = document.getElementById("search-input"); // search input.
 const SearchResult = document.getElementById("search-results"); // search input.
 const closeDialogBox = document.getElementById("closeDialogBox"); // search input.
 const dialogBox = document.getElementById("dialogBox"); // search input.
-const acceptDialog = document.getElementById("accept-Dialog"); // search input.
 
 window.addEventListener("load", (e) => {
   document.querySelector(".loading").style.display = "none";
@@ -155,8 +154,9 @@ async function getIpDetails() {
     const userCountry = user.country_name;
     document.getElementById(
       "user-info"
-    ).innerHTML = `<h1>Your Current Location is in ${userCountry}</h1>
-    <h3>Enable pricing and shipping policies to ${userCountry}</h3><br>`;
+    ).innerHTML = `<h1>Your Current Location is ${userCountry}.</h1>
+    <h4>Enable pricing and shipping policies to ${userCountry}.</h4><br>
+    <button id="accept-Dialog" onclick="acceptDialogOnclick()" title="Accept Settings">OK</button>`;
     body.style.overflow = "hidden";
   } catch (error) {
     console.log(error);
@@ -169,8 +169,8 @@ closeDialogBox.addEventListener("click", (e) => {
   body.style.overflow = "auto";
 });
 
-acceptDialog.addEventListener("click", (e) => {
+function acceptDialogOnclick() {
   dialogBox.close();
   body.style.overflow = "auto";
   // add logic of setting price or other things when user click this.
-});
+}
