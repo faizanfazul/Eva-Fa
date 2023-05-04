@@ -367,19 +367,22 @@ hr {
   padding: 10px;
   width: 50%;
   border-radius: 5px;
-  margin: 5px auto;
+  margin: 0 auto;
   cursor: pointer;
   color: #fff;
   font-size: 1rem;
   font-weight: bolder;
   border: 2px solid #000;
 }
+#accept-Dialog:focus{
+    outline: 0.5px dashed #000;
+}
 #accept-Dialog:hover {
   background-color: transparent;
   color: #000;
   transition: all 0.3s ease-in;
 }
-#dialogBox button:focus {
+#closeDialogBox:focus {
   outline: 0.5px dashed #000;
 }
 /* Loader styling starts*/
