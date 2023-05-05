@@ -73,10 +73,10 @@ article {
 .product-details-section {
   width: 40%;
   position: relative;
+  opacity: 0.8;
 }
 .product-details-section h2 a {
   color: #000;
-  opacity: 0.8;
   text-transform: uppercase;
   font-size: 0.9rem;
   position: absolute;
@@ -97,36 +97,34 @@ article {
 .add-to-wish img:nth-child(2) {
   display: none;
 }
-.more-of-product {
+.name-pricing {
   text-transform: uppercase;
   margin-top: 30px;
   letter-spacing: 3px;
 }
 .product-details-section h1 {
   font-size: 1.6rem;
-  opacity: 0.9;
 }
-.product-details-section .sterling-gold {
+.product-details-section .sterling-gold,
+.sku {
   font-weight: 900;
   margin-top: 6px;
 }
 #current-product-price {
   margin-top: 8px;
   letter-spacing: 3px;
-  opacity: 0.8;
 }
 .details-description {
   margin-top: 10px;
 }
-.details-description h4 {
-  opacity: 0.8;
-}
 .details-description p {
   margin-top: 10px;
   line-height: 23px;
+  font-weight: 600;
 }
 .details-description ul {
-  margin-left: 50px;
+  margin-left: 40px;
+  font-weight: 800;
 }
 .details-description li {
   margin: 10px 0;
@@ -591,7 +589,7 @@ footer hr {
   justify-content: center;
   gap: 100px;
 }
-.footer-links div ul{
+.footer-links div ul {
   list-style: none;
 }
 .footer-links div ul li a {

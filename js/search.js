@@ -23,10 +23,7 @@ searchInput.addEventListener("input", (event) => {
 });
 function checkTitle() {
   let documentTitle = document.querySelector("title");
-  if (
-    documentTitle.textContent == "Eva Fa" ||
-    documentTitle.textContent == "Wish list"
-  ) {
+  if (documentTitle.textContent == "Eva Fa") {
     return "";
   } else {
     return "../";
@@ -34,6 +31,11 @@ function checkTitle() {
 }
 function renderSearchResults(results) {
   searchResults.innerHTML = "";
+   if (results.length === 0) {
+     const noResultsHtml = `<div class="no-results" style="font-size:2rem;">No results found for</div>`;
+     searchResults.insertAdjacentHTML("beforeend", noResultsHtml);
+     return;
+   }
   results.forEach((result) => {
     const resultHtml = `
                 <style>

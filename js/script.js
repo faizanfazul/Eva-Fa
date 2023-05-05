@@ -128,49 +128,12 @@ addToWishButton.forEach((clickedHeart) => {
 
     if (correspondingHeartIcon.style.display === "none") {
       correspondingHeartIcon.style.display = "inline";
-      // clone logic
-      // also add remove item
+      // TODO clone logic
     } else {
       correspondingHeartIcon.style.display = "none";
       // wishItems.removeChild(wishClickedItem);
+      // TODO remove item
     }
   });
 });
-
-// get user IP
-function getIpAddress() {
-  return fetch("https://api.ipify.org/?format=json")
-    .then((response) => response.json())
-    .then((data) => data.ip)
-    .catch((error) => console.error(error));
-}
-// get user ip details
-async function getIpDetails() {
-  try {
-    const ipAddress = await getIpAddress();
-    const response = await fetch(`https://ipapi.co/${ipAddress}/json/`);
-    const user = await response.json();
-    dialogBox.showModal();
-    const userCountry = user.country_name;
-    document.getElementById(
-      "user-info"
-    ).innerHTML = `<h1>Your Current Location is ${userCountry}.</h1>
-    <h4>Enable pricing and shipping policies to ${userCountry}.</h4><br>
-    <button id="accept-Dialog" onclick="acceptDialogOnclick()" title="Accept Settings">OK</button>`;
-    body.style.overflow = "hidden";
-  } catch (error) {
-    console.log(error);
-  }
-}
-getIpDetails();
-
-closeDialogBox.addEventListener("click", (e) => {
-  dialogBox.close();
-  body.style.overflow = "auto";
-});
-
-function acceptDialogOnclick() {
-  dialogBox.close();
-  body.style.overflow = "auto";
-  // add logic of setting price or other things when user click this.
-}
+// TODO validate disposal email addresses by github or by any service. 
