@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../resources/logo.png" type="image/x-icon">
+    <title>Page not found | Eva Fa</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700');
+        @import url('https://fonts.googleapis.com/css?family=Catamaran:400,800');
+
+        .error-container {
+            text-align: center;
+            font-size: 106px;
+            font-family: 'Catamaran', sans-serif;
+            font-weight: bolder;
+            margin: 70px 10px;
+        }
+
+        .error-container>span {
+            display: inline-block;
+            position: relative;
+        }
+
+        .error-container>span.four {
+            width: 120px;
+            height: 30px;
+            border-radius: 999px;
+            background: linear-gradient(323deg, rgba(54, 69, 79, 1) 35%, rgba(226, 203, 153, 1) 100%);
+        }
+
+        .error-container>span.four:before,
+        .error-container>span.four:after {
+            content: '';
+            display: block;
+            position: absolute;
+            border-radius: 999px;
+        }
+
+        .error-container>span.four:before {
+            width: 30px;
+            height: 136px;
+            left: 60px;
+            bottom: -43px;
+            background: linear-gradient(323deg, rgba(54, 69, 79, 1) 35%, rgba(226, 203, 153, 1) 100%);
+        }
+
+        .error-container>span.four:after {
+            width: 127px;
+            height: 30px;
+            transform: rotate(-49.5deg);
+            left: -18px;
+            bottom: 36px;
+            background: linear-gradient(323deg, rgba(54, 69, 79, 1) 35%, rgba(226, 203, 153, 1) 100%);
+        }
+
+        .error-container>span.zero {
+            vertical-align: text-top;
+            width: 136px;
+            height: 136px;
+            border-radius: 999px;
+            background: linear-gradient(323deg, rgba(54, 69, 79, 1) 35%, rgba(226, 203, 153, 1) 100%);
+            animation: bgShadow 5s infinite;
+        }
+
+        .error-container>span.zero:after {
+            content: '';
+            display: block;
+            position: absolute;
+            border-radius: 999px;
+            width: 60px;
+            height: 60px;
+            left: 38px;
+            bottom: 38px;
+            background: #ccc;
+            box-shadow: -2px 2px 2px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .screen-reader-text {
+            position: absolute;
+            top: -9999em;
+            left: -9999em;
+        }
+
+        @keyframes bgShadow {
+            0% {
+                box-shadow: inset -160px 160px 0px 5px rgba(0, 0, 0, 0.4);
+            }
+
+            45% {
+                box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
+            }
+
+            55% {
+                box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
+            }
+
+            100% {
+                box-shadow: inset 160px -160px 0px 5px rgba(0, 0, 0, 0.4);
+            }
+        }
+
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #ccc;
+            margin-bottom: 50px;
+        }
+
+        html,
+        button,
+        input,
+        select,
+        textarea {
+            font-family: 'Montserrat', Helvetica, sans-serif;
+            color: #6a6161;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 30px 15px;
+        }
+
+        .zoom-area {
+            max-width: 490px;
+            margin: 30px auto 30px;
+            font-size: 19px;
+            text-align: center;
+        }
+
+        .link-container {
+            text-align: center;
+        }
+
+        a.link {
+            text-transform: uppercase;
+            font-size: 13px;
+            background-image: linear-gradient(to right, #403B4A 0%, #E7E9BB 51%, #403B4A 100%);
+            transition: 0.5s;
+            background-size: 200% auto;
+            padding: 10px 15px;
+            border-radius: 20px;
+            color: #fff;
+            font-weight: bold;
+            display: inline-block;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            line-height: 1.5;
+            text-decoration: none;
+            margin-top: 50px;
+            letter-spacing: 1px;
+        }
+
+        a.link:hover {
+            background-position: right center;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="error-container">
+        <span class="four"><span class="screen-reader-text">4</span></span>
+        <span class="zero"><span class="screen-reader-text">0</span></span>
+        <span class="four"><span class="screen-reader-text">4</span></span>
+    </section>
+    <h1>404 Error</h1>
+    <p class="zoom-area"><b>The page you are searching doesn't exist</b></p>
+    <div class="link-container">
+        <a href="../index.html" class="link">Go Home</a>
+    </div>
+</body>
+
+</html>
