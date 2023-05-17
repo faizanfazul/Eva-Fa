@@ -656,7 +656,7 @@ footer hr {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    margin-left: 10px;
+    margin-left: 0px;
   }
   .search-bar-container {
     top: 70px;
@@ -771,8 +771,9 @@ footer hr {
     align-items: center;
     position: absolute;
     top: 23px;
-    right: 20px;
+    right: 10px;
     column-gap: 0px;
+    z-index: 200;
   }
   .currency {
     display: flex;

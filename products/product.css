@@ -73,7 +73,7 @@ article {
 .product-details-section {
   width: 40%;
   position: relative;
-  color:#525252;
+  color: #525252;
 }
 .product-details-section h2 a {
   color: #525252;
@@ -629,7 +629,7 @@ footer hr {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    margin-left: 10px;
+    margin-left: 0px;
   }
   .search-bar-container {
     top: 70px;
@@ -743,7 +743,8 @@ footer hr {
     align-items: center;
     position: absolute;
     top: 23px;
-    right: 20px;
+    right: 10px;
+    z-index: 200;
     column-gap: 0px;
   }
   .currency {

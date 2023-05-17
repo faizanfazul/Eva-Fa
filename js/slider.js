@@ -3,6 +3,7 @@
 var swiper = new Swiper(".main-swiper", {
   spaceBetween: 10,
   loop: false,
+  speed: 1000,
   effect: "creative",
   creativeEffect: {
     perspective: true,
@@ -29,8 +30,10 @@ var swiper = new Swiper(".main-swiper", {
 // for New arrival products slider
 var swiper = new Swiper(".new-arrival-swiper", {
   spaceBetween: 10,
+  // loop:true,
+  // speed: 1000,
   // autoplay: {
-  //   delay: 2000,
+  //   delay: 0,
   //   disableOnInteraction: false,
   // },
   breakpoints: {
