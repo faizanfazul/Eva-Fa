@@ -3,7 +3,7 @@
 var swiper = new Swiper(".main-swiper", {
   spaceBetween: 10,
   loop: false,
-  speed: 1000,
+  speed: 600,
   effect: "creative",
   creativeEffect: {
     perspective: true,
@@ -31,7 +31,7 @@ var swiper = new Swiper(".main-swiper", {
 var swiper = new Swiper(".new-arrival-swiper", {
   spaceBetween: 10,
   // loop:true,
-  // speed: 1000,
+  speed: 800,
   // autoplay: {
   //   delay: 0,
   //   disableOnInteraction: false,

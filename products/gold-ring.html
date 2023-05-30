@@ -55,10 +55,8 @@
                 <img src="../resources/profile.png" alt="profile icon" class="icons" title="Your profile">
             </a>
             <div class="cart-icon" id="cart">
-                <a href="#">
-                    <img src="../resources/cart.png" alt="cart icon" class="icons" title="Your cart">
-                    <span id="cart-count"></span>
-                </a>
+                <img src="../resources/cart.png" alt="cart icon" class="icons" title="Your cart">
+                <span id="cart-count"></span>
             </div>
         </div>
         <nav id="navbar">
@@ -101,11 +99,14 @@
     <main>
         <!-- Search Bar -->
         <div class="search-bar-container" id="search-container">
-            <form class="search-form" action="">
+            <div class="search-form">
                 <img src="../resources/search.png" alt="Search icon">
                 <img src="../resources/X.png" alt="X icon" onclick="closeSearch()">
                 <input type="text" id="search-input" placeholder="Search...">
-            </form>
+            </div>
+            <div id="loading-indicator" class="Search-loading">
+                <img src="../resources/Dual-Ring.gif" alt="loading...">
+            </div>
             <div id="search-results">
 
             </div>
@@ -161,7 +162,7 @@
                     <div class="sterling-gold">sterling gold</div>
                     <div class="sku">Sku: 12345678</div>
                 </div>
-                <h3 id="current-product-price">DHS. 170</h3>
+                <h3 id="current-product-price">AED 170</h3>
                 <div class="details-description">
                     <h4>Details and description</h4>
                     <p>Gila is Italian craftsmanship at its best made entirely in Italy each piece is a manifestation of
