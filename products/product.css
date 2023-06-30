@@ -50,7 +50,7 @@ article {
   border-radius: 10px;
 }
 .select-images .swiper-slide {
-  filter: blur(1.2px);
+  opacity: 0.5;
   height: 200px;
   overflow: hidden !important;
   cursor: pointer;
@@ -70,7 +70,7 @@ article {
   object-fit: cover;
 }
 .select-images .swiper-slide-thumb-active {
-  filter: blur(0px);
+  opacity: 1;
 }
 /* swiper ends */
 .product-details-section {
@@ -86,19 +86,20 @@ article {
   top: 0;
   left: 0;
 }
-.add-to-wish {
+.wish-icon {
   position: absolute;
   top: 0;
   right: 25px;
   cursor: pointer;
 }
-.add-to-wish img {
+.wish-icon img {
   position: absolute;
   top: 0;
   left: 0;
 }
-.add-to-wish img:nth-child(2) {
-  display: none;
+#wishIcon{
+   width: 24px;
+  height: 24px;
 }
 .name-pricing {
   text-transform: uppercase;
@@ -108,7 +109,7 @@ article {
 .product-details-section h1 {
   font-size: 1.6rem;
 }
-.product-details-section .sterling-gold,
+.product-details-section .metal,
 .sku {
   font-weight: 900;
   margin-top: 6px;

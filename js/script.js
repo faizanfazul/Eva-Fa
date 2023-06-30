@@ -118,22 +118,19 @@ menuItems.forEach((item) => {
   });
 });
 
-const addToWishButton = document.querySelectorAll(".add-to-wish");
+const wishButton = document.getElementById("wishButton");
+const wishIcon = document.getElementById("wishIcon");
+let isWished = false;
 
-addToWishButton.forEach((clickedHeart) => {
-  clickedHeart.addEventListener("click", (e) => {
-    const clickedButton = e.currentTarget;
-    const correspondingHeartIcon = clickedButton.lastElementChild;
-    const WishedProduct = clickedHeart.parentNode.cloneNode(true); // cloned product
-
-    if (correspondingHeartIcon.style.display === "none") {
-      correspondingHeartIcon.style.display = "inline";
-      // TODO clone logic
-    } else {
-      correspondingHeartIcon.style.display = "none";
-      // wishItems.removeChild(wishClickedItem);
-      // TODO remove item
-    }
-  });
+wishButton.addEventListener("click", function () {
+  isWished = !isWished;
+  if (isWished) {
+    wishIcon.src = "../resources/filledwishicon.png";
+  } else {
+    wishIcon.src = "../resources/wishicon.png";
+    // TODO Solve the path problem
+  }
 });
+
+
 // TODO validate disposal email addresses by github or by any service. 

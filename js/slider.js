@@ -72,6 +72,7 @@ var swiper2 = new Swiper(".product-slideShow", {
   loop: true,
   lazy: true,
   spaceBetween: 10,
+  speed: 800,
   zoomContainerClass: "swiper-zoom-container",
   navigation: {
     nextEl: ".swiper-button-next",

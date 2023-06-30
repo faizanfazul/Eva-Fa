@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="resources/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
+    <script defer data-site="https://faizanfazul.github.io/Eva-Fa/index.html" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
     <title>Eva Fa</title>
 </head>
 
@@ -162,7 +163,7 @@
                     <div class="swiper-slide">
                         <div class="product">
                             <div class="add-to-wish">
-                                <img src="resources/wishicon.png" alt="Heart icon" width="22" height="22">
+                                <img src="resources/wishicon.png" alt="Heart icon" width="22" height="22" id="wish">
                                 <img src="resources/filledwishicon.png" alt="filled Heart icon" width="22" height="22">
                             </div>
                             <a href="#">
@@ -212,10 +213,9 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="product">
-                            <div class="add-to-wish">
-                                <img src="resources/wishicon.png" alt="Heart icon" width="22" height="22">
-                                <img src="resources/filledwishicon.png" alt="filled Heart icon" width="22" height="22">
-                            </div>
+                            <button id="wishButton" class="wish-icon">
+                                <img id="wishIcon" src="../resources/wishicon.png" alt="Wish Icon" />
+                            </button>
                             <a href="#">
                                 <img src="resources/ring-5.jpg" alt="ring-5">
                             </a>

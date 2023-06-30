@@ -291,7 +291,7 @@ hr {
   letter-spacing: 3px;
   color: #6a6161;
 }
-.search-form{
+.search-form {
   border-bottom: 3px solid #e2cb99;
 }
 .search-form img:nth-child(1) {
@@ -328,7 +328,7 @@ hr {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.Search-loading{
+.Search-loading {
   display: none;
   z-index: 102;
   position: absolute;
@@ -336,7 +336,7 @@ hr {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.Search-loading > img{
+.Search-loading > img {
   width: 65px;
 }
 /* search bar ends */
@@ -354,6 +354,14 @@ hr {
   border: none;
   z-index: 990;
   background: transparent;
+  opacity: 0;
+  scale: 0;
+  display: block;
+  transition: all 1.5s;
+}
+#dialogBox[open] {
+  opacity: 1;
+  scale: 1;
 }
 #closeDialogBox {
   position: absolute;
@@ -502,21 +510,20 @@ hr {
     opacity: 10;
   }
 }
-.add-to-wish {
+.wish-icon {
   position: absolute;
-  top: 5px;
-  right: 30px;
+  top: 0;
+  right: 25px;
   cursor: pointer;
-  z-index: 989;
 }
-.add-to-wish img {
+.wish-icon img {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 990;
 }
-.add-to-wish img:nth-child(2) {
-  display: none;
+#wishIcon{
+   width: 24px;
+  height: 24px;
 }
 .wishItemsSection {
   color: #000;
@@ -864,6 +871,9 @@ footer hr {
     position: absolute;
     top: 30px;
     right: 20px;
+  }
+  #dialogBox {
+    width: 60%;
   }
   .product-name {
     font-size: 1.2rem;
